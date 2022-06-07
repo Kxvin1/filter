@@ -2,15 +2,15 @@
 from .db import db
 
 # Join -- defined outside so both tables can reference
-business_categories = db.Table(
-    "business_category",
-    db.Column(
-        "business_id", db.Integer, db.ForeignKey("businesses.id"), primary_key=True
-    ),
-    db.Column(
-        "category_id", db.Integer, db.ForeignKey("categories.id"), primary_key=True
-    ),
-)
+# business_categories = db.Table(
+#     "business_category",
+#     db.Column(
+#         "business_id", db.Integer, db.ForeignKey("businesses.id"), primary_key=True
+#     ),
+#     db.Column(
+#         "category_id", db.Integer, db.ForeignKey("categories.id"), primary_key=True
+#     ),
+# )
 
 
 class Business(db.Model):
@@ -46,9 +46,9 @@ class Business(db.Model):
     review = db.relationship("Review", back_populates="business", cascade="all, delete")
 
     #   - One to Many: Business hasMany Categories (fk: business_id)
-    categories = db.relationship(
-        "Category", back_populates="business", secondary=business_categories
-    )
+    # categories = db.relationship(
+    #     "Category", back_populates="business", secondary=business_categories
+    # )
 
     def to_dict(self):
         return {
@@ -77,15 +77,15 @@ class Business(db.Model):
         }
 
 
-class Category(db.Model):
-    __tablename__ = "categories"
+# class Category(db.Model):
+#     __tablename__ = "categories"
 
-    id = db.Column(db.Integer, primary_key=True)
-    category_name = db.Column(db.String(255), nullable=False)
+#     id = db.Column(db.Integer, primary_key=True)
+#     category_name = db.Column(db.String(255), nullable=False)
 
-    business = db.relationship(
-        "Business", back_populates="Categories", secondary=business_categories
-    )
+#     business = db.relationship(
+#         "Business", back_populates="Categories", secondary=business_categories
+#     )
 
-    def to_dict(self):
-        return {"category_name": self.category_name}
+#     def to_dict(self):
+#         return {"category_name": self.category_name}

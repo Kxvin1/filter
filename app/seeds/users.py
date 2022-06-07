@@ -7,51 +7,61 @@ def seed_users():
         username="Demo",
         email="Demo@demo.com",
         password="password",
+        role="admin"
     )
     user2 = User(
         username="Adam",
         email="Adam@adam.com",
         password="password1",
+        role="member"
     )
     user3 = User(
         username="Jason",
         email="Jason@jason.com",
         password="password2",
+        role="member"
     )
     user4 = User(
         username="Andrew",
         email="Andrew@andrew.com",
         password="password3",
+        role="member"
     )
     user5 = User(
         username="Christina",
         email="Christina@christina.com",
         password="password4",
+        role="member"
     )
     user6 = User(
         username="Sophia",
         email="Sophia@sophia.com",
         password="password5",
+        role="member"
     )
     user7 = User(
         username="Stephen",
         email="Stephen@stephen.com",
         password="password6",
+        role="member"
     )
     user8 = User(
         username="Klay",
         email="Klay@klay.com",
         password="password7",
+        role="member"
     )
     user9 = User(
         username="Danielle",
         email="Danielle@danielle.com",
         password="password8",
+        role="member"
     )
     user10 = User(
         username="Hailey",
         email="Hailey@hailey.com",
         password="password9",
+        role="admin"
     )
 
     db.session.add(demo)
