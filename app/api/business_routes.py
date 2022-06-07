@@ -4,12 +4,6 @@ from .auth_routes import validation_errors_to_error_messages
 from app.forms import NewBusinessForm
 from app.models import db, Business, Image
 
-# ! comment in later for s3
-# import boto3
-# import botocore
-# from app.config import Config
-# from app.aws_s3 import *
-
 business_routes = Blueprint("businesses", __name__)
 
 # Prefix: /api/businesses

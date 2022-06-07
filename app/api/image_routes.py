@@ -2,11 +2,10 @@ from flask import Blueprint, request
 from app.models import db, Image
 from flask_login import login_required
 
-# ! comment in later for s3
-# import boto3
-# import botocore
-# from app.config import Config
-# from app.aws_s3 import *
+import boto3
+import botocore
+from app.config import Config
+from app.aws_s3 import *
 
 image_routes = Blueprint("images", __name__)
 
@@ -28,37 +27,35 @@ def delete_image(id):
     db.session.commit()
     return "Delete Successful"
 
-
-# ! comment in later when ready to implement s3
 # s3 stuff below
 
 # upload image (s3)
-# @image_routes.route("/images", methods=["POST"])
-# @login_required
-# def add_business_images():
-#     newFile = request.form.get("newFile")
-#     print(newFile)
-#     if newFile == "true":
-#         if "file" not in request.files:
-#             return "No user_file key in request.files"
-#         file = request.files["file"]
+@image_routes.route("/upload", methods=["POST"])
+@login_required
+def add_business_images():
+    newFile = request.form.get("newFile")
+    print(newFile)
+    if newFile == "true":
+        if "file" not in request.files:
+            return "No user_file key in request.files"
+        file = request.files["file"]
 
-#         if file:
-#             business_id = request.form.get("business_id")
-#             file_url = upload_file_to_s3(file)
-#             # file_url = file_url.replace(" ", "+")
-#             image = Image(business_id=business_id, url=file_url["url"])
-#             db.session.add(image)
-#             db.session.commit()
+        if file:
+            business_id = request.form.get("business_id")
+            file_url = upload_file_to_s3(file)
+            # file_url = file_url.replace(" ", "+")
+            image = Image(business_id=business_id, url=file_url["url"])
+            db.session.add(image)
+            db.session.commit()
 
-#     if newFile == "false":
-#         print("********************************")
-#         business_id = request.form.get("business_id")
-#         url = request.form.get("file")
-#         print(business_id)
-#         print(url)
-#         image = Image(business_id=business_id, url=url)
-#         db.session.add(image)
-#         db.session.commit()
+    if newFile == "false":
+        print("********************************")
+        business_id = request.form.get("business_id")
+        url = request.form.get("file")
+        print(business_id)
+        print(url)
+        image = Image(business_id=business_id, url=url)
+        db.session.add(image)
+        db.session.commit()
 
-#     return {"message": "success"}
+    return {"message": "success"}
