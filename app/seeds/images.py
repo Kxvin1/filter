@@ -3,7 +3,6 @@ from app.models import db, Image
 
 def seed_images():
 
-    # josh images
     image1 = Image(
         business_id=1,
         user_id=1,
