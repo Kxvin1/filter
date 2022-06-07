@@ -26,8 +26,8 @@ class Business(db.Model):
     city = db.Column(db.String(80), nullable=False)
     state = db.Column(db.String(30), nullable=False)
     country = db.Column(db.String(80), nullable=False)
-    phone_number = db.column(db.String(25), nullable=False)
-    website = db.column(db.String(255), nullable=False)
+    phone_number = db.Column(db.String(25), nullable=False)
+    website = db.Column(db.String(255), nullable=False)
     lat = db.Column(db.Float, nullable=False)
     lng = db.Column(db.Float, nullable=False)
     # fmt: off
