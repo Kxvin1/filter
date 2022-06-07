@@ -13,7 +13,7 @@ def seed_businesses():
         country="USA",
         phone_number="4243892406",
         website="http://supacoffee.com",
-        price=None,
+        # price=None,
         lat=34.05528170177322,
         lng=-118.38389153077996,
     )
@@ -27,7 +27,7 @@ def seed_businesses():
         country="USA",
         phone_number="4242884048",
         website="http://www.aharoncoffee.com",
-        price=None,
+        # price=None,
         lat=34.065358362642606,
         lng=-118.39953883077972,
     )
@@ -41,7 +41,7 @@ def seed_businesses():
         country="USA",
         phone_number="3108609345",
         website="http://www.sheerasweets.com",
-        price=None,
+        # price=None,
         lat=34.06880852807598,
         lng=-118.40592151728659,
     )
@@ -55,7 +55,7 @@ def seed_businesses():
         country="USA",
         phone_number="3103911380",
         website="https://coffeeconnectionla.com/",
-        price=None,
+        # price=None,
         lat=34.00328035466812,
         lng=-118.43279470194516,
     )
@@ -69,7 +69,7 @@ def seed_businesses():
         country="USA",
         phone_number="3104022821",
         website="http://www.lacolombe.com",
-        price=None,
+        # price=None,
         lat=34.069754401373494,
         lng=-118.4055995596152,
     )
@@ -83,7 +83,7 @@ def seed_businesses():
         country="USA",
         phone_number="2067805777",
         website="http://www.storyville.com",
-        price=None,
+        # price=None,
         lat=47.6090724433759,
         lng=-122.34041313049076,
     )
@@ -97,7 +97,7 @@ def seed_businesses():
         country="USA",
         phone_number="2067223327",
         website="https://coffeeholichouse.com/",
-        price=None,
+        # price=None,
         lat=47.557442707783494,
         lng=-122.28599251514954,
     )
@@ -111,7 +111,7 @@ def seed_businesses():
         country="USA",
         phone_number="2062222222",
         website="https://anchorheadcoffee.com/",
-        price=None,
+        # price=None,
         lat=47.61354493151684,
         lng=-122.33477453049059,
     )
@@ -125,7 +125,7 @@ def seed_businesses():
         country="USA",
         phone_number="2066594814",
         website="http://www.milsteadandco.com",
-        price=None,
+        # price=None,
         lat=47.64960461466107,
         lng=-122.3481053169967,
     )
@@ -139,7 +139,7 @@ def seed_businesses():
         country="USA",
         phone_number="9991234567",
         website="https://www.yelp.com/biz/hello-em-viet-coffee-and-roastery-seattle-2",
-        price=None,
+        # price=None,
         lat=47.59748504563124,
         lng=-122.31550328816235,
     )
@@ -153,7 +153,7 @@ def seed_businesses():
         country="USA",
         phone_number="4157801579",
         website="http://www.riseandgrind-sf.com",
-        price=None,
+        # price=None,
         lat=37.77392091049802,
         lng=-122.46615893071034,
     )
@@ -167,7 +167,7 @@ def seed_businesses():
         country="USA",
         phone_number="4157029244",
         website="http://www.homecoffeesf.com",
-        price=None,
+        # price=None,
         lat=37.78252786627283,
         lng=-122.4810126595458,
     )
@@ -181,7 +181,7 @@ def seed_businesses():
         country="USA",
         phone_number="4153451953",
         website="http://www.themillsf.com",
-        price=None,
+        # price=None,
         lat=37.77666632279603,
         lng=-122.43773324420324,
     )
@@ -195,7 +195,7 @@ def seed_businesses():
         country="USA",
         phone_number="4157539775",
         website="http://andytownsf.com",
-        price=None,
+        # price=None,
         lat=37.75686389261909,
         lng=-122.50231810187489,
     )
@@ -209,7 +209,7 @@ def seed_businesses():
         country="USA",
         phone_number="4155737740",
         website="https://snowbird-coffee.square.site/",
-        price=None,
+        # price=None,
         lat=37.76339068448897,
         lng=-122.46595244420352,
     )

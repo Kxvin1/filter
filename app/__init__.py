@@ -8,16 +8,13 @@ from flask_login import LoginManager
 from .models import db, User
 from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
+from .api.business_routes import business_routes
+from .api.review_routes import review_routes
+from .api.image_routes import image_routes
+from .api.search_routes import search_routes
+from .api.map_routes import key_routes
 
-# ! routes go here
-# import business_routes
-# import review_routes
-# import image_routes
-# import map_routes
-# import search_routes
-
-# import category_routes (bonus)
-
+# import category_routes (bonus) - NYI
 
 from .seeds import seed_commands
 
@@ -41,14 +38,13 @@ app.cli.add_command(seed_commands)
 app.config.from_object(Config)
 app.register_blueprint(user_routes, url_prefix="/api/users")
 app.register_blueprint(auth_routes, url_prefix="/api/auth")
-# ! app.register_blueprint routes go here
-# businesses route here --> /api/businesses
-# reviews route here --> /api/reviews
-# images route here --> /api/images
-# search route here --> /api/search
-# map route here --> /api/maps
+app.register_blueprint(business_routes, url_prefix="/api/businesses")
+app.register_blueprint(review_routes, url_prefix="/api/reviews")
+app.register_blueprint(image_routes, url_prefix="/api/images")
+app.register_blueprint(search_routes, url_prefix="/api/search")
+app.register_blueprint(key_routes, url_prefix="/api/key")
 
-# category route here --> /api/categories (bonus)
+# category route here --> /api/categories (bonus) - NYI
 
 
 db.init_app(app)

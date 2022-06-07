@@ -31,7 +31,7 @@ class Business(db.Model):
     lat = db.Column(db.Float, nullable=False)
     lng = db.Column(db.Float, nullable=False)
     # fmt: off
-    price = db.Column(db.Float, nullable=True) # --> use later when implementing filtering by $/$$/$$$/$$$$
+    # price = db.Column(db.Float, nullable=True) # --> use later when implementing filtering by $/$$/$$$/$$$$
 
     # fmt: on
     #   - Many to One: Businesses belongsTo User (fk: user_id)
@@ -64,7 +64,7 @@ class Business(db.Model):
             "website": self.website,
             "lat": self.lat,
             "lng": self.lng,
-            "price": self.price,  # --> use later when implementing filtering by $/$$/$$$/$$$$
+            # "price": self.price,  # --> use later when implementing filtering by $/$$/$$$/$$$$
             "user": self.user.owner_info(),
             "images": [image.image_info() for image in self.images],
             "ratingSum": sum(
