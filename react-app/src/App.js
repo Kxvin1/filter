@@ -14,6 +14,7 @@ import User from "./components/User";
 
 // ! import components here
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer";
 
 import {
   GoogleMap,
@@ -53,7 +54,8 @@ function App() {
       <Header isLoaded={loaded} />
       <Switch>
         <Route path="/" exact={true}>
-          Splash Page Component + Footer Component
+          Splash Page Component
+          <Footer />
         </Route>
         <ProtectedRoute path="/businesses/new" exact={true}>
           New Business Form Route

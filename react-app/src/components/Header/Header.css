@@ -24,11 +24,9 @@ header {
 #signup {
   color: #212121cc;
   margin: 20px;
-  /* background-color: #212121cc; */
 }
 
 #signup:hover {
-  /* background-color: #a8927a; */
   color: #fff;
 }
 
@@ -61,15 +59,11 @@ header {
   text-align: center;
   color: #fff;
   transition: all 1s 0s;
-}
-
-.nav-bar:hover {
-  /* color: #a8927a; */
+  align-items: center;
 }
 
 .active-link {
   border-bottom: 2px solid rgb(235, 89, 116);
-  /* color: rgb(204, 45, 74); */
 }
 
 #left-container {
@@ -85,7 +79,6 @@ header {
 .home-button {
   transition-duration: 0.2s;
   height: 7em;
-  /* padding: 0 2px; */
   cursor: pointer;
   margin-left: 2em;
 }

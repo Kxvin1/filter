@@ -12,6 +12,7 @@
   transition: all 0.5s;
   width: 7em;
   border: 1px solid whitesmoke;
+  color: white;
 }
 
 .login-btn-modal:hover {
