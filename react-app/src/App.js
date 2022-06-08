@@ -12,6 +12,7 @@ import UsersList from "./components/UsersList";
 import User from "./components/User";
 // not using these
 
+// ! import components here
 import Header from "./components/Header/Header";
 
 import {
@@ -49,23 +50,27 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Header />
+      <Header isLoaded={loaded} />
       <Switch>
-        <Route path="/login" exact={true}>
-          <LoginForm />
+        <Route path="/" exact={true}>
+          Splash Page Component + Footer Component
         </Route>
-        <Route path="/sign-up" exact={true}>
-          <SignUpForm />
+        <ProtectedRoute path="/businesses/new" exact={true}>
+          New Business Form Route
+        </ProtectedRoute>
+        <ProtectedRoute path={`/businesses/edit/:businessId`}>
+          Edit Business Form Route
+        </ProtectedRoute>
+        <ProtectedRoute path={`/businesses/:businessId`}>
+          Business Details Page
+        </ProtectedRoute>
+        <ProtectedRoute path={`/directions/:businessId`}>
+          Directions Component
+        </ProtectedRoute>
+        <Route exact path="/search">
+          Search Display/Results
         </Route>
-        <ProtectedRoute path="/users" exact={true}>
-          <UsersList />
-        </ProtectedRoute>
-        <ProtectedRoute path="/users/:userId" exact={true}>
-          <User />
-        </ProtectedRoute>
-        <ProtectedRoute path="/" exact={true}>
-          <h1>My Home Page</h1>
-        </ProtectedRoute>
+        <Route>Page Not Found Component + Footer Component</Route>
       </Switch>
     </BrowserRouter>
   );

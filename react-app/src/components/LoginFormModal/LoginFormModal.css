@@ -1,0 +1,28 @@
+.login-btn-modal {
+  border: none;
+  display: inline-block;
+  margin: 0;
+  background-color: #25252500;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: 500;
+  padding: 15px 15px;
+  transition: all 0.5s;
+  width: 7em;
+  border: 1px solid whitesmoke;
+}
+
+.login-btn-modal:hover {
+  /* color: #504b47; */
+  background-color: #e8e8e8bb;
+  /* transform: scale(1.2); */
+  cursor: pointer;
+}
+
+.error {
+  position: absolute;
+  margin-top: 7em;
+  margin-left: -3em;
+}

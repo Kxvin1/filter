@@ -2,8 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
-// import LoginFormModal from "../LoginFormModal";
-// import SignupFormModal from "../SignupFormModal";
+import LoginFormModal from "../LoginFormModal";
+import SignupFormModal from "../SignUpFormModal";
 import * as sessionActions from "../../store/session";
 import logo from "../../logo-images/yelp-500.png";
 // import Search from "./Search";
@@ -29,7 +29,7 @@ function Header({ isLoaded }) {
       <>
         {/* <Search /> component goes here */}
         <h2 className="greeting-message-nav">
-          Hello, {sessionUser.first_name}!
+          Hello, {sessionUser?.username}!
         </h2>
         <div>
           <button className="logout-button" onMouseDown={logout}>
@@ -49,12 +49,12 @@ function Header({ isLoaded }) {
         </li>
         <li className="favorites-nav nav-button">
           <NavLink activeClassName="active-link" to={`/businesses/new`}>
-            Add a Business: redirects to a business form page
+            Add a Business
           </NavLink>
         </li>
         <li className="favorites-nav nav-button">
           <NavLink activeClassName="active-link" to={`/search`}>
-            Write a Review: this redirects them to an empty Search Results Page
+            Write a Review
           </NavLink>
         </li>
       </ul>
@@ -62,15 +62,11 @@ function Header({ isLoaded }) {
   } else {
     defaultLinks = (
       <>
-        {/* make this a button */}
-        {/* login button: background is opaque (use rgba), has white borders #fff with white font #ff  --> on hover it turns #E0E0E0 */}
-        <li id="login">{/* <LoginFormModal /> */}</li>
-        {/* make this a button */}
-        {/* signup button: background is red #F40D15, has red borders #fff with white font ##F40D15  --> on hover it turns slightly brighter red (figure out hex in css) */}
+        <li id="login">
+          <LoginFormModal />
+        </li>
         <li id="signup">
-          {/* <button id="signup"> */}
-          {/* <SignupFormModal /> */}
-          {/* </button> */}
+          <SignupFormModal />
         </li>
       </>
     );
