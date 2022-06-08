@@ -43,17 +43,30 @@ function Header({ isLoaded }) {
     loggedInLinks = (
       <ul>
         <li className="nav-button">
-          <NavLink activeClassName="active-link" exact to="/">
+          <NavLink
+            activeClassName="active-link"
+            className="nav-links-color"
+            exact
+            to="/"
+          >
             Home
           </NavLink>
         </li>
         <li className="favorites-nav nav-button">
-          <NavLink activeClassName="active-link" to={`/businesses/new`}>
+          <NavLink
+            activeClassName="active-link"
+            className="nav-links-color"
+            to={`/businesses/new`}
+          >
             Add a Business
           </NavLink>
         </li>
         <li className="favorites-nav nav-button">
-          <NavLink activeClassName="active-link" to={`/search`}>
+          <NavLink
+            activeClassName="active-link"
+            className="nav-links-color"
+            to={`/search`}
+          >
             Write a Review
           </NavLink>
         </li>

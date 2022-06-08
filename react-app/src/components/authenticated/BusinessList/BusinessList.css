@@ -1,0 +1,79 @@
+.list-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.list-pic {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.number-star-rating {
+  margin-left: 10px;
+}
+
+.list-data {
+  display: grid;
+  align-items: center;
+  padding: 15px;
+}
+
+.list-title {
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  height: 100%;
+  box-sizing: border-box;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-info {
+  margin-top: -10px;
+  margin-bottom: -5px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.703);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.list-more {
+  display: flex;
+  justify-content: center;
+  padding-right: 10px;
+  align-items: center;
+}
+
+.list-more-link {
+  color: rgba(2, 122, 151, 1);
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.list-more-link:hover {
+  text-decoration: underline;
+}
+
+.info-window-phone {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .number-phone-svg {
+  margin-right: 10px;
+} */
+
+.phone-svg {
+  /* height: 1.5em; */
+  /* width: 2em; */
+}

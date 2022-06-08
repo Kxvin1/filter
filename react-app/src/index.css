@@ -2,16 +2,17 @@
 *,
 body {
   font-family: Helvetica Neue, sans-serif;
+  margin: 0px;
 }
 
 li {
   list-style-type: none;
 }
 
-a,
+/* Do not comment this in it will break the nav bar styling */
+/* a,
 a:visited {
-  /* color: rgb(46, 44, 44); */
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
@@ -19,7 +20,7 @@ a:hover,
 a:active {
   color: white;
   text-decoration: none;
-}
+} */
 
 .roundbox {
   -moz-border-radius: 6px 6px 6px 6px;
@@ -123,18 +124,17 @@ a:active {
 
 ::-webkit-scrollbar-track {
   border: 5px solid white;
-  /* background-color: #b2bec3; */
   z-index: 1;
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 10px;
   z-index: 1;
   background-color: #dfe6e9;
 }
 
 ::-webkit-scrollbar-thumb {
   z-index: 1;
-  background-color: rgb(171, 169, 169);
+  background-color: rgb(168, 168, 168);
   border-radius: 5px;
 }

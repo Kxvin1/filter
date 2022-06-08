@@ -74,10 +74,10 @@ def update_business(businessId):
         business.lng = data["lng"]
         # business.price = data["price"]
 
-        images = Image.query.filter(Image.business_id == businessId).all()
-        for image in images:
-            db.session.delete(image)
-        db.session.commit()
+        # images = Image.query.filter(Image.business_id == businessId).all()
+        # for image in images:
+        #     db.session.delete(image)
+        # db.session.commit()
 
         return business.to_dict()
     return {"errors": validation_errors_to_error_messages(form.errors)}, 401

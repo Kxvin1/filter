@@ -1,0 +1,29 @@
+.business-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 100px;
+}
+
+.list-heading {
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 28px;
+  color: #000000;
+}
+
+@media screen and (max-width: 1050px) {
+  .business-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .business-list {
+    width: 100%;
+  }
+}

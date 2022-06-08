@@ -9,7 +9,7 @@
   color: #fff;
   transition: all 0.2s ease-in-out;
   border: 1px solid #090d0e;
-  background-color: rgb(190, 42, 70);
+  background-color: rgb(255, 10, 55);
   font-size: 1.07em;
 }
 
@@ -17,6 +17,7 @@
   color: #fff;
   transform: scale(1.06);
   cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 10, 55, 0.4);
 }
 
 .login-btn-disabled {
@@ -41,7 +42,7 @@
   font-weight: 700;
   cursor: pointer;
   background-color: whitesmoke;
-  color: rgb(190, 42, 70);
+  color: rgb(255, 10, 55);
   transition: all 0.2s ease-in-out;
   border: 1px solid #c0bdbd;
   background-color: #c0bdbd;
@@ -52,6 +53,7 @@
   /* color: #fff; */
   transform: scale(1.06);
   cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 10, 55, 0.4);
 }
 
 .login-form {
@@ -67,12 +69,12 @@
 }
 
 .login-form input:focus::placeholder {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   transition: all 0.15s ease-in;
 }
 
 .login-header {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-weight: 700;
   font-size: 1.4rem;
   margin-top: -1rem;
@@ -95,7 +97,7 @@
   width: 400px;
   padding: 40px;
   transform: translate(-50%, -50%);
-  background: rgba(251, 251, 251, 0.906);
+  background: rgba(0, 0, 0, 0.75);
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -116,10 +118,10 @@
   width: 100%;
   padding: 10px 0;
   font-size: 16px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-bottom: 30px;
   border: none;
-  border-bottom: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(255, 255, 255);
   outline: none;
   background: transparent;
 }

@@ -13,12 +13,17 @@ footer {
   flex-direction: column;
   padding: 5px 0;
   /* background-color: #212121cc; */
-  background: linear-gradient(
+  /* background: linear-gradient(
     0deg,
     rgba(0, 0, 0, 0.3337710084033614) 59%,
     rgba(82, 82, 82, 0.5494572829131652) 88%,
     rgba(255, 255, 255, 0.3309698879551821) 94%
-  );
+  ); */
+}
+
+.fa-linkedin,
+.fa-github {
+  color: white;
 }
 
 .footer-ul {
@@ -32,15 +37,15 @@ footer {
 }
 
 .footer-ul li {
-  color: #000;
+  color: #fff;
   font-size: 15px;
 }
 
 .white {
-  color: #000;
+  color: #fff;
 }
 .white:hover {
-  color: #000;
+  color: #fff;
 }
 
 .fa-github,
