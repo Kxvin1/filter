@@ -42,9 +42,9 @@ def add_business_images():
 
         if file:
             business_id = request.form.get("business_id")
+            user_id = request.form.get("user_id")
             file_url = upload_file_to_s3(file)
-            # file_url = file_url.replace(" ", "+")
-            image = Image(business_id=business_id, url=file_url["url"])
+            image = Image(business_id=business_id, user_id=user_id, url=file_url["url"])
             db.session.add(image)
             db.session.commit()
 

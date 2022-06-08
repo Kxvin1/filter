@@ -16,6 +16,7 @@ import User from "./components/User";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
+import NewBusinessForm from "./components/authenticated/BusinessForm";
 
 import {
   GoogleMap,
@@ -59,7 +60,7 @@ function App() {
           <Footer />
         </Route>
         <ProtectedRoute path="/businesses/new" exact={true}>
-          New Business Form Route
+          <NewBusinessForm />
         </ProtectedRoute>
         <ProtectedRoute path={`/businesses/edit/:businessId`}>
           Edit Business Form Route

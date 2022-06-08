@@ -48,7 +48,7 @@ export const addBusinessThunk =
   ) =>
   async (dispatch) => {
     const response = await fetch("/api/businesses", {
-      method: "post",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
@@ -100,12 +100,13 @@ export const deleteBusinessThunk = (businessId) => async (dispatch) => {
 
 // for s3 --> image_routes.py
 export const uploadFile = (fileForm) => async (dispatch) => {
-  const { business_id, file, newFile } = fileForm;
+  const { business_id, user_id, file, newFile } = fileForm;
 
   const form = new FormData();
   form.append("file", file);
   form.append("business_id", business_id);
   form.append("newFile", newFile);
+  form.append("user_id", user_id);
 
   const res = await fetch("/api/images/upload", {
     method: "POST",

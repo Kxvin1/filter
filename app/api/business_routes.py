@@ -4,6 +4,11 @@ from .auth_routes import validation_errors_to_error_messages
 from app.forms import NewBusinessForm
 from app.models import db, Business, Image
 
+import boto3
+import botocore
+from app.config import Config
+from app.aws_s3 import *
+
 business_routes = Blueprint("businesses", __name__)
 
 # Prefix: /api/businesses
@@ -23,7 +28,7 @@ def get():
 def add_business():
     form = NewBusinessForm()
     form["csrf_token"].data = request.cookies["csrf_token"]
-
+    print(form.validate_on_submit(), "~~~~~~~~~~~~~~~~~")
     if form.validate_on_submit():
         data = form.data
         business = Business(
