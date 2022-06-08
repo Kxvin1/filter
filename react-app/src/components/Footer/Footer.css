@@ -12,7 +12,13 @@ footer {
   height: 5.5rem;
   flex-direction: column;
   padding: 5px 0;
-  background-color: #212121cc;
+  /* background-color: #212121cc; */
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3337710084033614) 59%,
+    rgba(82, 82, 82, 0.5494572829131652) 88%,
+    rgba(255, 255, 255, 0.3309698879551821) 94%
+  );
 }
 
 .footer-ul {
@@ -26,15 +32,15 @@ footer {
 }
 
 .footer-ul li {
-  color: #fff;
+  color: #000;
   font-size: 15px;
 }
 
 .white {
-  color: #fff;
+  color: #000;
 }
 .white:hover {
-  color: #fff;
+  color: #000;
 }
 
 .fa-github,

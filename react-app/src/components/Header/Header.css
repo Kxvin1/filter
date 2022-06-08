@@ -2,7 +2,7 @@ header {
   display: flex;
   justify-content: center;
   margin: 0;
-  background-color: #212121cc;
+  /* background-color: #212121cc; */
   position: fixed;
   width: 100%;
   z-index: 3;
@@ -60,6 +60,12 @@ header {
   color: #fff;
   transition: all 1s 0s;
   align-items: center;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3337710084033614) 59%,
+    rgba(82, 82, 82, 0.31416316526610644) 88%,
+    rgba(255, 255, 255, 0.3309698879551821) 94%
+  );
 }
 
 .active-link {
