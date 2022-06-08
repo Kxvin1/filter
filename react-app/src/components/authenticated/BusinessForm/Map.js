@@ -34,7 +34,7 @@ export default function Map(props) {
               {loading ? <div>...loading</div> : null}
               {suggestions.map((suggestion) => {
                 const style = {
-                  backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
+                  backgroundColor: suggestion.active ? "#FF9900" : "#fff",
                 };
                 return (
                   <div
