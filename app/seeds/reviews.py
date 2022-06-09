@@ -34,8 +34,8 @@ def seed_reviews():
                     date=(
                         datetime.datetime.now() - datetime.timedelta(days=reviewDays)
                     ).date(),
-                    # the next 3 assign a random star value from 3 to 5 stars for each of the ratings
-                    rating=random.randint(1, 5),
+                    # the next 3 assign a random star value from 4 to 5 stars for each of the ratings
+                    rating=random.randint(4, 5),
                 )
             )
 
