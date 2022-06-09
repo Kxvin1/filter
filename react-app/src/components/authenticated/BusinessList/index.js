@@ -22,16 +22,16 @@ const BusinessList = ({ business }) => {
 
     const ratingAvg = ratingS / ratingL;
 
-    let totalAvg = ratingAvg / 1 + 2;
+    let totalAvg = ratingAvg;
 
     if (!totalAvg) {
       return 0;
     }
 
     // this is temporary, will make the review seeds have a higher chance of leaving a review of 4 or higher
-    if (totalAvg >= 5) {
-      totalAvg = Math.random() * (4.9 - 4.4) + 4.4;
-    }
+    // if (totalAvg >= 5) {
+    //   totalAvg = Math.random() * (4.9 - 4.4) + 4.4;
+    // }
 
     return totalAvg.toFixed(1).toString();
   };

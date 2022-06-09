@@ -17,18 +17,15 @@ const EditBusinessForm = () => {
   const history = useHistory();
   const { businessId } = useParams();
 
-  useEffect(() => {
-    dispatch(getUserBusinesses(user.id));
-  }, [dispatch]);
-
   const businesses = useSelector((state) => Object.values(state.businesses));
-  //   console.log(businesses, "state");
+  // console.log(businesses, "state");
 
-  const businessToEdit = businesses.find((business) => {
-    return business.id.toString() === businessId;
-  });
+  const businessToEdit = useSelector((state) => state.businesses[businessId]);
+  console.log(businessToEdit, "+++++++++++");
 
-  //   console.log(businessToEdit);
+  // const businessToEdit = businesses.find((business) => {
+  //   return business?.id.toString() === businessId;
+  // });
 
   const [name, setName] = useState(businessToEdit?.name);
   const [address, setAddress] = useState(businessToEdit?.address);
@@ -94,15 +91,6 @@ const EditBusinessForm = () => {
     // // history.push(`$/businesses/${businessId}`);
   };
 
-  useEffect(() => {
-    let images = businessToEdit?.images_business.map((image) => {
-      return { data_url: image };
-    });
-
-    const errors = [];
-    setImages(images);
-  }, []);
-
   const addImages = async (images, business_id, user_id) => {
     for (let x = 0; x < images.length; x++) {
       let image = images[x];
@@ -131,16 +119,22 @@ const EditBusinessForm = () => {
   };
 
   useEffect(() => {
+    dispatch(getUserBusinesses(user.id));
+  }, [dispatch, businessId]);
+
+  useEffect(() => {
+    let images = businessToEdit?.images_business.map((image) => {
+      return { data_url: image };
+    });
+
     const errors = [];
-    // ! uncomment this to auto fill form then uncomment back
-    // ! form doesn't auto fill out unless this is commented in...
-    // ! but if this is commented in it breaks the page
-    // ! if it's commented back out and in (1 cycle) the page works as intended
-    // ! note: images don't seem to be saved when editing again, but images are uploading to s3 properly
-    // ! also the line below can't be commented in or the edit/update won't work properly
-    // deploy test
-    // the line below causes errors:
-    // if (images.length < 3) errors.push("Please include at least 3 images");
+    setImages(images);
+  }, []);
+
+  useEffect(() => {
+    const errors = [];
+    if (images.length < 3) errors.push("Please include at least 3 images");
+    // if (!name.length) errors.push("test");
     setValidationErrors(errors);
   }, [name, zipcode, address, city, state, country, images]);
 

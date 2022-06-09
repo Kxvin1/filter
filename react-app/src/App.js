@@ -18,6 +18,9 @@ import Footer from "./components/Footer";
 import Main from "./components/Main";
 import NewBusinessForm from "./components/authenticated/BusinessForm";
 import EditBusinessForm from "./components/authenticated/EditBusinessForm";
+import BusinessDetails from "./components/authenticated/BusinessDetails";
+
+import Directions from "./components/authenticated/Directions";
 
 import {
   GoogleMap,
@@ -66,11 +69,11 @@ function App() {
         <ProtectedRoute path={`/businesses/edit/:businessId`}>
           <EditBusinessForm />
         </ProtectedRoute>
-        <ProtectedRoute path={`/businesses/:businessId`}>
-          Business Details Page
+        <ProtectedRoute path={`/businesses/:id`}>
+          <BusinessDetails />
         </ProtectedRoute>
         <ProtectedRoute path={`/directions/:businessId`}>
-          Directions Component
+          <Directions />
         </ProtectedRoute>
         <Route exact path="/search">
           Search Display/Results

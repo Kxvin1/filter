@@ -156,23 +156,6 @@
   justify-content: center;
 }
 
-.spot_form_button {
-  border: none;
-  border-radius: 2em;
-  width: 10em;
-  height: 2em;
-  cursor: pointer;
-  color: white;
-  font-weight: 400;
-  font-size: medium;
-  background-color: #ff385c;
-  box-shadow: 2px 2px 2px rgb(70 67 67);
-}
-
-.spot_form_button:hover {
-  opacity: 0.95;
-}
-
 .change_image {
   color: rgb(13, 13, 13);
   background-color: #c7ede6;
