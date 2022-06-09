@@ -26,31 +26,36 @@ const BusinessDetailsBanner = ({ business, reviews }) => {
     let totalAvg = ratingAvg;
 
     if (!totalAvg) {
-      return "No reviews";
+      return;
     }
 
     // this is temporary, will make the review seeds have a higher chance of leaving a review of 4 or higher
     // if (totalAvg >= 5) {
     //   totalAvg = Math.random() * (4.9 - 4.4) + 4.4;
-    // } a
+    // }
 
     return totalAvg.toFixed(1).toString();
   };
 
   const busRating = avgRating(business);
 
+  console.log(business, "business in banner details");
+
   return (
     <div className="business-details-banner-container">
       <div className="business-details-banner-content">
         <div className="business-details-banner-title-container">
-          <h1 className="banner-inner-h1">{business.name}</h1>
-          <p className="banner-inner-p">{reviews.length} reviews</p>
+          <h1 className="banner-inner-h1">{business?.name}</h1>
           <span className="stars" style={{ "--rating": `${rating}` }}>
             <span className="number-star-rating-banner-business-details">
-              {busRating}
+              {busRating}{" "}
+              <span className="banner-inner-p">{reviews.length} reviews</span>
             </span>
           </span>
-          <span className="info_window_star"></span>
+          {/* <p className="banner-inner-p">{reviews.length} reviews </p> */}
+          <span className="banner-inner-p">
+            <span className="open-text-banner">Open:</span> 8:00 AM - 4:00 PM
+          </span>
         </div>
       </div>
     </div>

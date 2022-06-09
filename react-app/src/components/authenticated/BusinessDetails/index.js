@@ -8,6 +8,7 @@ import { useParams, useHistory, Link } from "react-router-dom";
 import phoneSvg from "../../../logo-images/phone-svg.svg";
 import directionsSvg from "../../../logo-images/directions-svg.svg";
 import websiteSvg from "../../../logo-images/website-svg.svg";
+import starSvg from "../../../logo-images/star-svg.svg";
 
 import {
   deleteBusinessThunk,
@@ -27,6 +28,7 @@ import mapStyles from "../mapStyles";
 
 // Import components
 import BusinessDetailsBanner from "./Banner";
+import Reviews from "../Reviews/Reviews";
 
 import "./BusinessDetails.css";
 
@@ -129,6 +131,11 @@ const BusinessDetails = () => {
   if (!business) {
     return <h1 className="roll-heading">Loading...</h1>;
   }
+  const root = document.documentElement;
+
+  const scrollToBottom = () => {
+    root.scrollTo(100000, 1000000);
+  };
 
   return (
     <>
@@ -136,12 +143,41 @@ const BusinessDetails = () => {
       <div className="business-details-container">
         <div>
           <div className="crud-buttons">
+            {/* <Link className="action-button" onClick={() => scrollToBottom()}>
+              Write a Review
+            </Link> */}
+
+            {/* start test area */}
+
             <Link
-              className="action-button"
-              // to={`this will open a modal or this page will have the comment box with no modal`}
+              onClick={() => scrollToBottom()}
+              class=" css-4ut3yi"
+              data-activated="false"
+              data-button="true"
             >
-              Add a Review
+              <div class=" css-110vchp border-color--default__09f24__NPAKY">
+                <div class=" css-0 padding-r1__09f24__ibKww border-color--default__09f24__NPAKY">
+                  <span
+                    alt=""
+                    aria-hidden="true"
+                    role="img"
+                    class="icon--24-star-v2 css-tza3mu"
+                  >
+                    <svg width="24" height="24" class="icon_svg">
+                      <path d="M17.87 22a.93.93 0 01-.46-.12L12 19.08l-5.41 2.84a1 1 0 01-1-.08 1 1 0 01-.4-1l1-6-4.39-4.26a1 1 0 01.56-1.7L8.4 8l2.7-5.48a1 1 0 011.8 0L15.6 8l6 .88a1 1 0 01.56 1.7l-4.38 4.27 1 6a1 1 0 01-1 1.17l.09-.02zM12 17c.163.002.323.04.47.11l4.07 2.15-.78-4.54a1 1 0 01.29-.89l3.3-3.21-4.56-.72a1 1 0 01-.79-.54l-2-4.14-2 4.14a1 1 0 01-.75.54l-4.56.67L8 13.78a1 1 0 01.29.89l-.78 4.54 4.07-2.15A1.12 1.12 0 0112 17z"></path>
+                    </svg>
+                  </span>
+                </div>
+                <div class=" css-0 border-color--default__09f24__NPAKY">
+                  <span class="css-1enow5j" data-font-weight="semibold">
+                    Write a review
+                  </span>
+                </div>
+              </div>
             </Link>
+
+            {/* end test area */}
+
             {user?.id === business?.user_id ? (
               <Link className="action-button" to={`/businesses/edit/${id}`}>
                 Edit Business
@@ -157,7 +193,9 @@ const BusinessDetails = () => {
               <></>
             )}
           </div>
-          <h2 className="photos-h2">Photos</h2>
+          <div className="photos-title-container">
+            <h2 className="photos-h2">Photos</h2>
+          </div>
           <div className="images_container">
             {business?.images_business.map((image) => (
               <img
@@ -180,6 +218,7 @@ const BusinessDetails = () => {
           {/* put review component here */}
           {/* put review component here */}
           {/* put review component here */}
+          <Reviews businessId={business.id} reviews={reviews} user={user} />
         </div>
         <div className="business-details-right">
           <div className="business-info-details">

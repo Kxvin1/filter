@@ -50,12 +50,14 @@
   color: white;
   font-size: 48px;
   margin: 0px;
+  margin-bottom: 0.4em;
 }
 
 .banner-inner-p {
   color: white;
   font-size: 20px;
-  margin-top: 5px;
+  /* margin-top: 5px; */
+  margin-top: 0.4em;
   margin-bottom: 5px;
   margin-left: 3px;
 }
@@ -79,4 +81,12 @@
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+/* .info_window_star {
+  color: white;
+} */
+
+.open-text-banner {
+  color: rgba(2, 161, 109, 1);
 }

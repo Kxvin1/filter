@@ -2,13 +2,18 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .photos-h2 {
   margin-top: 1em;
   font-size: 20px;
   color: rgba(45, 46, 47, 1);
+}
+
+.photos-title-container {
+  display: flex;
+  justify-content: center;
 }
 
 .action-button {
@@ -36,6 +41,17 @@
   margin: auto;
   font-size: 15px;
   font-weight: bold;
+
+  /* display: flex; */
+  /* justify-content: center; */
+  /* margin: 0; */
+  position: fixed;
+  /* width: 100%; */
+  /* z-index: 3; */
+  /* max-height: 8rem; */
+  top: 50;
+  /* left: 800; */
+  /* bottom: 800; */
 }
 
 .website-h3 {
@@ -87,7 +103,7 @@
   .business-details-container {
     display: grid;
     grid-template-columns: 4fr 2.5fr;
-    width: 69%;
+    width: 89%;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
@@ -174,3 +190,235 @@ button.gallery-control.gallery-control--prev {
 /* .info_window_phone {
   text-align: center;
 } */
+
+.star-svg-icon {
+  margin-right: 0.5em;
+  height: 20px;
+}
+
+/*! CSS Used from: Embedded */
+/* div,
+span,
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+} */
+.css-4ut3yi {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none;
+  background-repeat: no-repeat;
+  border: 0;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  cursor: pointer;
+  height: 40px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+  position: relative;
+  text-align: center;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  -webkit-transition-property: background-image, background-color,
+    background-position, background-size, border-color, box-shadow, opacity;
+  transition-property: background-image, background-color, background-position,
+    background-size, border-color, box-shadow, opacity;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  width: auto;
+  background-color: rgba(224, 7, 7, 1);
+  color: rgba(255, 255, 255, 1);
+  background-position: calc(
+      var(--mousedown-x) - calc(var(--button-width, 100px) * 200) / 2
+    )
+    calc(var(--mousedown-y) - calc(var(--button-width, 100px) * 200) / 2);
+  background-size: calc(var(--button-width, 100px) * 200)
+    calc(var(--button-width, 100px) * 200);
+}
+.css-4ut3yi:active,
+.css-4ut3yi:focus,
+.css-4ut3yi:hover,
+.css-4ut3yi:visited {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+.css-4ut3yi:disabled {
+  background-color: rgba(235, 235, 235, 1);
+  background-image: none;
+  border-color: rgba(235, 235, 235, 1);
+  box-shadow: none;
+  color: rgba(200, 201, 202, 1);
+  outline: none;
+  pointer-events: none;
+  -webkit-transition: none;
+  transition: none;
+}
+.css-4ut3yi:hover {
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+}
+.css-4ut3yi:focus {
+  outline: 2px solid rgba(2, 122, 151, 1);
+  outline-offset: 1px;
+}
+.css-4ut3yi:focus:not(:focus-visible) {
+  outline: 0;
+}
+@media (pointer: coarse) {
+  .css-4ut3yi:hover {
+    box-shadow: none;
+  }
+}
+.css-4ut3yi:active {
+  color: rgba(255, 255, 255, 1);
+}
+.css-4ut3yi:focus {
+  background-color: rgb(249, 19, 27);
+}
+.css-4ut3yi:hover {
+  background-color: rgb(244, 13, 21);
+  color: rgba(255, 255, 255, 1);
+}
+.css-110vchp {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+.css-tza3mu {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+  top: -0.1em;
+  fill: currentColor;
+  top: 0;
+}
+.css-tza3mu::before {
+  position: absolute;
+  display: block;
+  left: 0;
+}
+.css-tza3mu::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.css-tza3mu svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  fill: inherit;
+  display: block;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.css-1enow5j {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  -webkit-letter-spacing: 0px;
+  -moz-letter-spacing: 0px;
+  -ms-letter-spacing: 0px;
+  letter-spacing: 0px;
+  line-height: 16px;
+  color: inherit;
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important;
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  -webkit-letter-spacing: -0.2px !important;
+  -moz-letter-spacing: -0.2px !important;
+  -ms-letter-spacing: -0.2px !important;
+  letter-spacing: -0.2px !important;
+  line-height: 24px !important;
+  margin-top: 1px !important;
+}
+/*! CSS Used from: Embedded */
+/* div,
+span,
+a {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  font: inherit;
+  vertical-align: baseline;
+} */
+/*! CSS Used from: https://s3-media0.fl.yelpcdn.com/assets/public/yelp-frontend-gondola-biz-details-pkg.yji-f05fe49aff007d44a7c4.css ; media=all */
+@media all {
+  .padding-r1__09f24__ibKww {
+    padding-right: 8px !important;
+  }
+  .border-color--default__09f24__NPAKY {
+    border-color: #ebebeb;
+  }
+}
+/*! CSS Used fontfaces */
+@font-face {
+  font-display: optional;
+  font-family: Poppins;
+  font-weight: 500;
+  src: url(https://s3-media0.fl.yelpcdn.com/assets/public/poppins-medium.yji-dc16a3592fdb61b620cc.woff2)
+      format("woff2"),
+    url(https://s3-media0.fl.yelpcdn.com/assets/public/poppins-medium.yji-468213c1a9cf4ac0ed6b.woff)
+      format("woff");
+}
+@font-face {
+  font-display: optional;
+  font-family: Poppins;
+  font-weight: 700;
+  src: url(https://s3-media0.fl.yelpcdn.com/assets/public/poppins-bold.yji-9690ce6275ddc5645cfa.woff2)
+      format("woff2"),
+    url(https://s3-media0.fl.yelpcdn.com/assets/public/poppins-bold.yji-0a53cdc68b4438be7b7d.woff)
+      format("woff");
+}
