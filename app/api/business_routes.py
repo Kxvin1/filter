@@ -79,8 +79,8 @@ def update_business(businessId):
         business.lng = data["lng"]
         # business.price = data["price"]
 
-        images = Image.query.filter(Image.business_id == businessId).all()
-        for image in images:
+        images_business = Image.query.filter(Image.business_id == businessId).all()
+        for image in images_business:
             db.session.delete(image)
         db.session.commit()
 
@@ -112,3 +112,13 @@ def delete_business(businessId):
             "lng": businessToDelete.lng,
             # "price": businessToDelete.price,
         }
+
+@business_routes.route("/user/<int:userId>")
+@login_required
+def get_business(userId):
+
+    userBusinesses = Business.query.filter(Business.user_id == userId).all()
+
+    results = [business.to_dict() for business in userBusinesses]
+
+    return {'businesses': results}

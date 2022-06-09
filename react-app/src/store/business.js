@@ -2,6 +2,20 @@ const LOAD = "business/LOAD";
 const ADD_ONE = "business/ADD";
 const EDIT = "business/EDIT";
 const DELETE = "business/DELETE";
+const LOAD_USER_BUSINESSES = "businesses/LOAD_USER_BUSINESSES";
+
+const loadUserBusinesses = (businesses) => ({
+  type: LOAD,
+  businesses: businesses.businesses,
+});
+
+export const getUserBusinesses = (userId) => async (dispatch) => {
+  const response = await fetch(`/api/businesses/user/${userId}`);
+  if (response.ok) {
+    const businesses = await response.json();
+    dispatch(loadUserBusinesses(businesses));
+  }
+};
 
 const loadBusiness = (businesses) => ({
   type: LOAD,
@@ -80,6 +94,7 @@ export const editBusinessThunk = (data, businessId) => async (dispatch) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
+  // console.log(response, "~~~~~~~~~~~~~~~~~~~");
   if (response.ok) {
     const editedBusiness = await response.json();
     dispatch(editBusiness(editedBusiness));
@@ -120,6 +135,14 @@ const initialState = {};
 
 const businessReducer = (state = initialState, action) => {
   switch (action.type) {
+    case LOAD_USER_BUSINESSES:
+      const userBusinesses = {};
+      action.businesses.forEach((business) => {
+        userBusinesses[business.id] = business;
+      });
+      return {
+        ...userBusinesses,
+      };
     case LOAD:
       const allBusinesses = {};
       action.businesses.forEach((business) => {

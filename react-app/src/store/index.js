@@ -4,10 +4,12 @@ import session from "./session";
 import businessReducer from "./business";
 import reviewReducer from "./review";
 import searchReducer from "./search";
+// import yourBusinessesReducer from "./your_businesses";
 
 const rootReducer = combineReducers({
   session,
   businesses: businessReducer,
+  // yourBusinesses: yourBusinessesReducer,
   reviews: reviewReducer,
   search: searchReducer,
 });
