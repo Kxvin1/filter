@@ -138,6 +138,7 @@ const EditBusinessForm = () => {
     // ! if it's commented back out and in (1 cycle) the page works as intended
     // ! note: images don't seem to be saved when editing again, but images are uploading to s3 properly
     // ! also the line below can't be commented in or the edit/update won't work properly
+    // deploy test
     // the line below causes errors:
     // if (images.length < 3) errors.push("Please include at least 3 images");
     setValidationErrors(errors);
