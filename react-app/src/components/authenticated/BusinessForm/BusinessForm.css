@@ -157,9 +157,12 @@
 }
 
 .change_image {
-  color: rgb(13, 13, 13);
+  /* color: rgb(13, 13, 13);
   background-color: #c7ede6;
-  border: 2px solid #c7ede6;
+  border: 2px solid #c7ede6; */
+  color: #fff;
+  background-color: #0e0f10;
+  border: 1.4px solid rgb(160, 158, 158);
   transition: color 0.15s ease-in-out;
   box-sizing: border-box;
   padding: 0 20px;

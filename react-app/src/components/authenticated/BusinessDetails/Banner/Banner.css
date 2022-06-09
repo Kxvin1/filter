@@ -61,8 +61,7 @@
 
 .stars {
   display: inline-block;
-  font-size: 26px;
-  font-family: Times;
+  font-size: 30px;
   line-height: 1;
   justify-content: center;
 }
@@ -70,7 +69,7 @@
 .stars::before {
   --percent: calc(var(--rating) / 5 * 100%);
   content: "★★★★★";
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   background: linear-gradient(
     90deg,
     #fc0 var(--percent),

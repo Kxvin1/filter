@@ -13,11 +13,14 @@
 
 .action-button {
   display: block;
+  margin-left: 1em;
 }
 
 .action-button:hover {
-  color: white;
+  color: #fff;
   background-color: #ff9900;
+  /* transform: scale(1.06); */
+  /* box-shadow: 0 5px 15px rgba(255, 10, 55, 0.4); */
 }
 
 .business-details-right {
@@ -92,9 +95,10 @@
   }
 
   .action-button {
-    color: #ff9900;
-    background-color: white;
-    border: 2px solid #ff9900;
+    color: #fff;
+    background-color: #0e0f10;
+    border: 1.4px solid rgb(160, 158, 158);
+    /* border: 2px solid #205a79; */
     transition: color 0.15s ease-in-out;
     box-sizing: border-box;
     padding: 10px 10px;
@@ -121,9 +125,12 @@
   }
 
   .action-button {
-    color: #ff9900;
-    background-color: white;
-    border: 2px solid #ff9900;
+    /* color: #fff;
+    background-color: rgb(255, 10, 55);
+    border: 1.4px solid rgb(160, 158, 158); */
+    color: #fff;
+    background-color: #0e0f10;
+    border: 1.4px solid rgb(160, 158, 158);
     transition: color 0.15s ease-in-out;
     box-sizing: border-box;
     padding: 5px 5px;
