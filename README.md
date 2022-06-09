@@ -3,7 +3,7 @@
 This is the starter for the Flask React project
 
 ## Getting started
-1. Clone this repository (only this branch)
+1. Clone this repository (only this branch) a
 
    ```bash
    git clone https://github.com/appacademy-starters/python-project-starter.git
