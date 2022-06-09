@@ -128,6 +128,11 @@ const BusinessDetails = () => {
     setShowPhotoModal(true);
   };
 
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.opener = null;
+  };
+
   if (!business) {
     return <h1 className="roll-heading">Loading...</h1>;
   }
@@ -203,7 +208,9 @@ const BusinessDetails = () => {
                 key={image.id}
                 src={image}
                 alt={image.id}
-                onClick={() => handlePhotos()}
+                onClick={() => {
+                  openInNewTab(image);
+                }}
               />
             ))}
           </div>
