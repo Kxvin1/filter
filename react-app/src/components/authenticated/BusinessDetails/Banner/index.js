@@ -37,6 +37,18 @@ const BusinessDetailsBanner = ({ business, reviews }) => {
     return totalAvg.toFixed(1).toString();
   };
 
+  let reviewTextCounter;
+
+  if (reviews.length === 0) {
+    reviewTextCounter = <span className="banner-inner-p"></span>;
+  } else if (reviews.length === 1) {
+    reviewTextCounter = <span className="banner-inner-p">1 review</span>;
+  } else {
+    reviewTextCounter = (
+      <span className="banner-inner-p">{reviews.length} reviews</span>
+    );
+  }
+
   const busRating = avgRating(business);
 
   console.log(business, "business in banner details");
@@ -48,8 +60,8 @@ const BusinessDetailsBanner = ({ business, reviews }) => {
           <h1 className="banner-inner-h1">{business?.name}</h1>
           <span className="stars" style={{ "--rating": `${rating}` }}>
             <span className="number-star-rating-banner-business-details">
-              {busRating}{" "}
-              <span className="banner-inner-p">{reviews.length} reviews</span>
+              {busRating} <span>{reviewTextCounter}</span>
+              {/* <span className="banner-inner-p">{reviews.length} reviews</span> */}
             </span>
           </span>
           {/* <p className="banner-inner-p">{reviews.length} reviews </p> */}
