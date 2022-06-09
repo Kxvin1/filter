@@ -62,9 +62,32 @@ const ReviewForm = ({ userId, businessId }) => {
               Please fill out a star rating as well as a comment!
             </div>
           )}
-          <button className="modifyBtn" type="submit">
+          {/* <button className="modifyBtn" type="submit">
             New Review
-          </button>
+          </button> */}
+
+          {/* start testing section */}
+
+          <div
+            class=" margin-t4__09f24__G0VVf padding-b6__09f24__hfdiP border-color--default__09f24__NPAKY"
+            // style="max-width:200px"
+          >
+            <button
+              type="submit"
+              class=" css-cednmx"
+              data-activated="false"
+              data-testid="post-button"
+              value="submit"
+              data-button="true"
+              // style=""
+            >
+              <span class="css-1enow5j" data-font-weight="semibold">
+                Post Review
+              </span>
+            </button>
+          </div>
+
+          {/* end testing section */}
         </div>
       </form>
     </>

@@ -71,17 +71,17 @@ const ReviewCard = ({ review, user }) => {
           <div>
             <button
               className="modifyBtn"
-              title="Delete Review"
-              onClick={() => setShowDelete(true)}
-            >
-              <i class="fa fa-trash"></i>
-            </button>
-            <button
-              className="modifyBtn"
               title="Edit Review"
               onClick={() => setShowEdit(true)}
             >
               <i class="fas fa-edit"></i>
+            </button>
+            <button
+              className="modifyBtn"
+              title="Delete Review"
+              onClick={() => setShowDelete(true)}
+            >
+              <i class="fa fa-trash"></i>
             </button>
           </div>
         )}
@@ -92,8 +92,10 @@ const ReviewCard = ({ review, user }) => {
             <div className="x" onClick={closeForm}>
               <i className="fas fa-times"></i>
             </div>
-            <h2>Delete</h2>
-            <h4>Are you sure you want to delete your review?</h4>
+            {/* <h2>Delete</h2> */}
+            <h4 className="delete-your-review-confirmation-text">
+              Delete Your Review?
+            </h4>
             <button className="modifyBtn" onClick={deleteReview}>
               Delete
             </button>
@@ -109,9 +111,9 @@ const ReviewCard = ({ review, user }) => {
             <div className="x" onClick={closeForm}>
               <i className="fas fa-times"></i>
             </div>
-            <h2>Change your mind?</h2>
+            {/* <h2>Change your mind?</h2> */}
             <div className="starRatings">
-              <div className="starTitle">Editing Rating</div>
+              <div className="starTitle">Edit Rating & Review</div>
               <Rating
                 onClick={(rating) => setRating(rating)}
                 ratingValue={rating}
@@ -120,7 +122,7 @@ const ReviewCard = ({ review, user }) => {
             </div>
             <div>
               <form className="commentForm" onSubmit={editReview}>
-                <label>Edit Comment</label>
+                {/* <label>Edit Review</label> */}
                 <textarea
                   className="commentBox"
                   name="description"
