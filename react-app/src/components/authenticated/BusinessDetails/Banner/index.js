@@ -32,7 +32,7 @@ const BusinessDetailsBanner = ({ business, reviews }) => {
     // this is temporary, will make the review seeds have a higher chance of leaving a review of 4 or higher
     // if (totalAvg >= 5) {
     //   totalAvg = Math.random() * (4.9 - 4.4) + 4.4;
-    // }
+    // } a
 
     return totalAvg.toFixed(1).toString();
   };
