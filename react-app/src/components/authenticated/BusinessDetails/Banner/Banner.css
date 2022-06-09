@@ -1,7 +1,8 @@
 .business-details-banner-container {
   height: 40vh;
-  background-image: url("../../../../logo-images/banner.jpg");
-  background-position: center;
+  background-image: url("../../../../logo-images/grid-collage-2.jpg");
+  /* background-position: center; */
+  background-position: center bottom, left top;
   background-size: cover;
   display: flex;
   justify-content: center;
