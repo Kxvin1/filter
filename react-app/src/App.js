@@ -20,6 +20,7 @@ import NewBusinessForm from "./components/authenticated/BusinessForm";
 import EditBusinessForm from "./components/authenticated/EditBusinessForm";
 import BusinessDetails from "./components/authenticated/BusinessDetails";
 import SearchBusiness from "./components/authenticated/SearchBusiness";
+import PageNotFound from "./components/PageNotFound";
 
 import Directions from "./components/authenticated/Directions";
 
@@ -79,7 +80,10 @@ function App() {
         <ProtectedRoute path={`/search/:id`}>
           <SearchBusiness />
         </ProtectedRoute>
-        <Route>Page Not Found Component + Footer Component</Route>
+        <Route>
+          <PageNotFound />
+          <Footer />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

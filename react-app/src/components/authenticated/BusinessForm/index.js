@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import ImageUploading from "react-images-uploading";
-import { addBusinessThunk, uploadFile } from "../../../store/business";
+import {
+  addBusinessThunk,
+  uploadFile,
+  getBusinessesThunk,
+} from "../../../store/business";
 
 import Map from "./Map";
 import "./BusinessForm.css";
@@ -32,6 +36,11 @@ const NewBusinessForm = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // need this to be able to quick search from this component
+  useEffect(() => {
+    dispatch(getBusinessesThunk());
+  }, [dispatch]);
 
   const handleUpload = async (e) => {
     e.preventDefault();
