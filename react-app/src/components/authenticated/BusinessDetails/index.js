@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams, useHistory, Link } from "react-router-dom";
 
-import ReactBnBGallery from "react-bnb-gallery";
-import "react-bnb-gallery/dist/style.css";
+// import ReactBnBGallery from "react-bnb-gallery";
+// import "react-bnb-gallery/dist/style.css";
 
 import phoneSvg from "../../../logo-images/phone-svg.svg";
 import directionsSvg from "../../../logo-images/directions-svg.svg";
@@ -208,26 +208,26 @@ const BusinessDetails = () => {
                 key={image.id}
                 src={image}
                 alt={image.id}
-                onClick={() => {
-                  handlePhotos();
-                }}
+                // onClick={() => {
+                //   handlePhotos();
+                // }}
 
                 // ! Old version of onClick in this img element below that works (add back if react bnb fails)
-                // onClick={() => {
-                //   openInNewTab(image);
-                // }}
+                onClick={() => {
+                  openInNewTab(image);
+                }}
               />
             ))}
           </div>
 
           {/* REACT BNB GALLERY AREA */}
 
-          <ReactBnBGallery
+          {/* <ReactBnBGallery
             show={showPhotoModal}
             onClose={() => setShowPhotoModal(false)}
             photos={photoObject}
             activePhotoIndex={photoIndex}
-          />
+          /> */}
 
           {/* REACT BNB GALLERY AREA */}
 
