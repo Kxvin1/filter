@@ -1,6 +1,6 @@
 # Flask React Project
 
-This is the starter for the Flask React project
+This is the read me that gets updated when I need to redeploy
 
 ## Getting started
 1. Clone this repository (only this branch) a
