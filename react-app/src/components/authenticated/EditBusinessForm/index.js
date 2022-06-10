@@ -46,6 +46,14 @@ const EditBusinessForm = () => {
   const user = useSelector((state) => state.session.user);
   //   console.log(businessToEdit.id);
 
+  useEffect(() => {
+    let images = businessToEdit?.images_business.map((image) => {
+      return { data_url: image };
+    });
+
+    setImages(images);
+  }, []);
+
   const handleUpload = async (e) => {
     e.preventDefault();
 
@@ -80,15 +88,12 @@ const EditBusinessForm = () => {
     const businessId = businessData[1].id;
     const userId = businessData[1].user_id;
 
-    console.log(businessId, "biz id");
+    // console.log(businessId, "bus id");
     console.log(userId, "user id");
 
     await addImages(images, businessId, userId);
-    window.alert(
-      "Business edit successful. Redirecting you to your updated page!"
-    ); // temp alert replace with toastify
-    history.push(`/`); // temp, change to below when component is up
-    // // history.push(`$/businesses/${businessId}`);
+    window.alert("Edit successful. Redirecting to your updated page."); // temp alert replace with toastify
+    history.push(`/businesses/${businessId}`);
   };
 
   const addImages = async (images, business_id, user_id) => {
@@ -98,7 +103,10 @@ const EditBusinessForm = () => {
       let newFile = false;
       let file;
 
+      console.log(image, "IMAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+
       if (image.file) {
+        // if there is a file, this is a new/updated upload
         newFile = true;
         file = image.file;
       } else {
@@ -123,18 +131,8 @@ const EditBusinessForm = () => {
   }, [dispatch, businessId]);
 
   useEffect(() => {
-    let images = businessToEdit?.images_business.map((image) => {
-      return { data_url: image };
-    });
-
-    const errors = [];
-    setImages(images);
-  }, []);
-
-  useEffect(() => {
     const errors = [];
     if (images.length < 3) errors.push("Please include at least 3 images");
-    // if (!name.length) errors.push("test");
     setValidationErrors(errors);
   }, [name, zipcode, address, city, state, country, images]);
 

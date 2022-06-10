@@ -42,7 +42,7 @@ const Reviews = ({ businessId, reviews, user }) => {
   };
 
   const avgRatings = calculateAvgRatings();
-  console.log(avgRatings, "avgRatings");
+  // console.log(avgRatings, "avgRatings");
 
   return (
     <>

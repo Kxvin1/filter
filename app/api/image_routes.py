@@ -34,7 +34,6 @@ def delete_image(id):
 @login_required
 def add_business_images():
     newFile = request.form.get("newFile")
-    print(newFile)
     if newFile == "true":
         if "file" not in request.files:
             return "No user_file key in request.files"
@@ -49,12 +48,21 @@ def add_business_images():
             db.session.commit()
 
     if newFile == "false":
-        print("********************************")
         business_id = request.form.get("business_id")
+        user_id = request.form.get("user_id")
         url = request.form.get("file")
-        print(business_id)
-        print(url)
         image = Image(business_id=business_id, url=url)
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print(user_id, "USER ID")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         db.session.add(image)
         db.session.commit()
 
