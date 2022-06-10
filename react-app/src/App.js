@@ -24,21 +24,13 @@ import BusinessDetails from "./components/authenticated/BusinessDetails";
 import SearchBusiness from "./components/authenticated/SearchBusiness";
 import PageNotFound from "./components/PageNotFound";
 
-import Directions from "./components/authenticated/Directions";
-
-import {
-  GoogleMap,
-  useLoadScript,
-  Marker,
-  InfoWindow,
-} from "@react-google-maps/api";
-
-const libraries = ["places"];
+// import Directions from "./components/authenticated/Directions";
+import MapContainer from "./components/authenticated/MapContainer";
 
 function App() {
   const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch();
-  const key = useSelector((state) => state.map.key);
+  // const key = useSelector((state) => state.map.key);
 
   useEffect(() => {
     (async () => {
@@ -47,19 +39,19 @@ function App() {
     })();
   }, [dispatch]);
 
-  useEffect(() => {
-    if (!key) {
-      dispatch(getKey());
-    }
-  }, [dispatch, key]);
+  // useEffect(() => {
+  //   if (!key) {
+  //     dispatch(getKey());
+  //   }
+  // }, [dispatch, key]);
 
-  const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: key,
-    libraries,
-  });
+  // const { isLoaded, loadError } = useLoadScript({
+  //   googleMapsApiKey: key,
+  //   libraries,
+  // });
 
-  if (loadError) return "Error loading maps";
-  if (!isLoaded) return "Loading Maps";
+  // if (loadError) return "Error loading maps";
+  // if (!isLoaded) return "Loading Maps";
 
   if (!loaded) {
     return null;
@@ -83,8 +75,7 @@ function App() {
           <BusinessDetails />
         </ProtectedRoute>
         <ProtectedRoute path={`/directions/:businessId`}>
-          {key && <Directions />}
-          {/* instead of directions, MapContainer would be rendered here */}
+          {<MapContainer />}
         </ProtectedRoute>
         <ProtectedRoute path={`/search/:id`}>
           <SearchBusiness />
