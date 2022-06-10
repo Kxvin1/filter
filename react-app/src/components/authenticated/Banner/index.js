@@ -10,7 +10,6 @@ function Banner() {
   const handleForm = async (e) => {
     e.preventDefault();
 
-    // not functional, temp fix
     if (search.length > 0) {
       history.push(`/search/${search}`);
     } else {
@@ -24,7 +23,6 @@ function Banner() {
           {/* Search Bar Container don't delete this div*/}
         </div>
         <div className="banner-form-container">
-          {/* search not functional yet */}
           <form className="banner-search">
             <label htmlFor="search">
               <input

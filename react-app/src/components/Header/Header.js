@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
@@ -65,9 +65,9 @@ function Header({ isLoaded }) {
           <NavLink
             activeClassName="active-link"
             className="nav-links-color"
-            to={`/search`}
+            to={`/search/coffee`}
           >
-            Write a Review
+            Quick Search
           </NavLink>
         </li>
       </ul>

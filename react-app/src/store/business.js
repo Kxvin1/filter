@@ -120,8 +120,8 @@ export const uploadFile = (fileForm) => async (dispatch) => {
   const form = new FormData();
   form.append("file", file);
   form.append("business_id", business_id);
-  form.append("newFile", newFile);
   form.append("user_id", user_id);
+  form.append("newFile", newFile);
 
   const res = await fetch("/api/images/upload", {
     method: "POST",

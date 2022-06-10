@@ -1,0 +1,44 @@
+.search-results-container {
+  margin-top: 10em;
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+}
+
+.business-search-title {
+  font-weight: bold;
+  margin-bottom: 0px;
+  color: #1f1f1f;
+}
+
+.search-parameter {
+  color: rgba(2, 122, 151, 1);
+}
+
+.search-title-container {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-left: 11%;
+  padding-bottom: 15px;
+}
+
+.no-business-search-title {
+  font-weight: bold;
+  margin-bottom: 0px;
+  color: #1f1f1f;
+}
+
+.no-search-parameter {
+  color: rgb(218, 20, 20);
+}
+
+.no-search-title-container {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
