@@ -54,6 +54,10 @@ const EditBusinessForm = () => {
     setImages(images);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handleUpload = async (e) => {
     e.preventDefault();
 

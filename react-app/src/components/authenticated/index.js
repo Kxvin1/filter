@@ -17,6 +17,10 @@ const UserHome = () => {
     dispatch(getBusinessesThunk());
   }, [dispatch]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   businesses.sort((a, b) => b.id - a.id); // newest appear at the top
 
   return (

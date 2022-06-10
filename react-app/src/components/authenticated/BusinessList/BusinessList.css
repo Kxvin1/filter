@@ -4,6 +4,12 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin: 15px;
+  transition: box-shadow 0.9s ease;
+}
+
+.list-container:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.415);
+  border-radius: 10px;
 }
 
 .list-pic {
@@ -23,6 +29,7 @@
   display: grid;
   align-items: center;
   padding: 15px;
+  transition: box-shadow 1s ease;
 }
 
 .list-title {

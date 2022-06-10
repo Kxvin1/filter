@@ -89,6 +89,13 @@
   padding: 4em 1em 0 1em;
   border-radius: 20px;
   min-height: 9em;
+  transition: box-shadow 0.9s ease;
+  margin-bottom: 1em;
+}
+
+.singleReview:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.415);
+  border-radius: 20px;
 }
 
 .singleReview .modifyReviewBtns {
