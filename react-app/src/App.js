@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import { authenticate } from "./store/session";
 
@@ -11,6 +11,8 @@ import NavBar from "./components/NavBar";
 import UsersList from "./components/UsersList";
 import User from "./components/User";
 // not using these
+
+import { getKey } from "./store/key";
 
 // ! import components here
 import Header from "./components/Header/Header";
@@ -32,11 +34,11 @@ import {
 } from "@react-google-maps/api";
 
 const libraries = ["places"];
-const key = "AIzaSyBk4ZZCfn1TN-hg21AxnVM09w74yU2Gvh0"; // note: key is restricted to work on this site only
 
 function App() {
   const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch();
+  const key = useSelector((state) => state.map.key);
 
   useEffect(() => {
     (async () => {
@@ -44,6 +46,12 @@ function App() {
       setLoaded(true);
     })();
   }, [dispatch]);
+
+  useEffect(() => {
+    if (!key) {
+      dispatch(getKey());
+    }
+  }, [dispatch, key]);
 
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: key,
@@ -75,7 +83,8 @@ function App() {
           <BusinessDetails />
         </ProtectedRoute>
         <ProtectedRoute path={`/directions/:businessId`}>
-          <Directions />
+          {key && <Directions />}
+          {/* instead of directions, MapContainer would be rendered here */}
         </ProtectedRoute>
         <ProtectedRoute path={`/search/:id`}>
           <SearchBusiness />

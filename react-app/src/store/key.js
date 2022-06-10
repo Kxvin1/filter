@@ -6,9 +6,14 @@ const loadApiKey = (key) => ({
 });
 
 export const getKey = () => async (dispatch) => {
-  const res = await fetch("/api/key");
-  const data = await res.json();
-  dispatch(loadApiKey(data.api_key));
+  const res = await fetch("/api/key/", {
+    method: "POST",
+  });
+
+  if (res.ok) {
+    const data = await res.json();
+    dispatch(loadApiKey(data.googleMapsAPIKey));
+  }
 };
 
 const initialState = { key: null };

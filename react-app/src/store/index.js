@@ -5,6 +5,7 @@ import businessReducer from "./business";
 import reviewReducer from "./review";
 import searchReducer from "./search";
 // import yourBusinessesReducer from "./your_businesses";
+import mapsReducer from "./key";
 
 const rootReducer = combineReducers({
   session,
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   // yourBusinesses: yourBusinessesReducer,
   reviews: reviewReducer,
   search: searchReducer,
+  map: mapsReducer,
 });
 
 let enhancer;
