@@ -25,7 +25,7 @@
 }
 
 .action-button:hover {
-  color: #fff;
+  color: #000;
   /* background-color: #ff9900; */
   opacity: 0.95;
   box-shadow: 0 5px 15px rgba(33, 32, 32, 0.4);
@@ -116,8 +116,8 @@
   }
 
   .action-button {
-    color: #fff;
-    background-color: #0e0f10;
+    color: #000;
+    /* background-color: #0e0f10; */
     border: 1.4px solid rgb(160, 158, 158);
     /* border: 2px solid #205a79; */
     transition: all 0.8s ease-in-out;
@@ -149,8 +149,8 @@
     /* color: #fff;
     background-color: rgb(255, 10, 55);
     border: 1.4px solid rgb(160, 158, 158); */
-    color: #fff;
-    background-color: #0e0f10;
+    color: #000;
+    /* background-color: #0e0f10; */
     border: 1.4px solid rgb(160, 158, 158);
     transition: color 0.15s ease-in-out;
     box-sizing: border-box;
