@@ -29,16 +29,16 @@ function Splash() {
 
       <ul className="cb-slideshow">
         <li>
-          <span>First Image</span>
+          <span className="slideshow-images-splash">First Image</span>
         </li>
         <li>
-          <span>Second Image</span>
+          <span className="slideshow-images-splash">Second Image</span>
         </li>
         <li>
-          <span>Third Image</span>
+          <span className="slideshow-images-splash">Third Image</span>
         </li>
         <li>
-          <span>Fourth Image</span>
+          <span className="slideshow-images-splash">Fourth Image</span>
         </li>
       </ul>
     </div>
