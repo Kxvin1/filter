@@ -142,6 +142,16 @@ const BusinessDetails = () => {
     root.scrollTo(100000, 1000000);
   };
 
+  let numberOfPhotosText;
+
+  if (business?.images_business?.length === 1) {
+    numberOfPhotosText = <span>See 1 photo</span>;
+  } else {
+    numberOfPhotosText = (
+      <span>See {business?.images_business?.length} photos</span>
+    );
+  }
+
   return (
     <>
       <BusinessDetailsBanner business={business} reviews={reviews} />
@@ -179,6 +189,15 @@ const BusinessDetails = () => {
                   </span>
                 </div>
               </div>
+            </Link>
+
+            <Link
+              to={`/businesses/${id}/gallery`}
+              class="action-button"
+              data-activated="false"
+              data-button="true"
+            >
+              {numberOfPhotosText}
             </Link>
 
             {/* end test area */}

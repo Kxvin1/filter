@@ -89,3 +89,10 @@ figure > img {
     column-count: 2;
   }
 }
+
+.back-to-business-page {
+  font-size: 1em;
+  text-decoration: none;
+  color: #ff9900;
+  text-transform: capitalize;
+}

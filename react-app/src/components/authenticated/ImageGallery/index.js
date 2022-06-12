@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { getBusinessesThunk } from "../../../store/business";
 
@@ -47,7 +48,11 @@ const ImageGallery = () => {
       <div className="title-container">
         <h1 className="image-stream-title">
           Photos for <span>&nbsp;</span>
-          <span className="image-subtitle"> {business.name}</span>
+          <span className="image-subtitle">
+            <Link className="back-to-business-page" to={`/businesses/${id}`}>
+              {business.name}
+            </Link>
+          </span>
         </h1>
       </div>
       <div className="outside-grid">
