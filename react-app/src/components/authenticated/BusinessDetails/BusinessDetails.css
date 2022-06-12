@@ -13,6 +13,13 @@
   font-weight: bold;
 }
 
+.interactive-map-h2 {
+  margin-top: 2em;
+  font-size: 20px;
+  color: rgba(45, 46, 47, 1);
+  font-weight: bold;
+}
+
 .photos-title-container {
   display: flex;
   justify-content: center;
@@ -100,7 +107,7 @@
 
 .business-map {
   display: grid;
-  justify-content: center;
+  /* justify-content: center; */
   margin-top: 25px;
 }
 

@@ -29,6 +29,7 @@ import mapStyles from "../mapStyles";
 // Import components
 import BusinessDetailsBanner from "./Banner";
 import Reviews from "../Reviews/Reviews";
+import BusinessDetailsMap from "../BusinessDetailsMap";
 
 import "./BusinessDetails.css";
 
@@ -238,6 +239,16 @@ const BusinessDetails = () => {
               />
             ))}
           </div>
+          <div className="crud-buttons"></div>
+          {/* this div (crud-buttons) is for the border: don't delete */}
+          <div className="photos-title-container">
+            <h2 className="interactive-map-h2">Interactive Map</h2>
+          </div>
+          <div className="interactive_map_container">
+            <div className="business-map">
+              <BusinessDetailsMap />
+            </div>
+          </div>
 
           {/* REACT BNB GALLERY AREA */}
 
@@ -258,7 +269,7 @@ const BusinessDetails = () => {
           >
             <div class=" arrange__09f24__LDfbs gutter-auto__09f24__W9jlL vertical-align-middle__09f24__zU9sE margin-b3__09f24__l9v5d border-color--default__09f24__NPAKY">
               <div class=" arrange-unit__09f24__rqHTg arrange-unit-fill__09f24__CUubG border-color--default__09f24__NPAKY">
-                <h2 class="css-cfcjyn">Amenities and More</h2>
+                <h2 class="interactive-map-h2">Amenities and More</h2>
               </div>
             </div>
             <div class=" border-color--default__09f24__NPAKY">
@@ -727,21 +738,8 @@ const BusinessDetails = () => {
             </div>
           </div>
           {/* <div className="business-map">
-            <div className="search-spot-map">
-              <GoogleMap
-                mapContainerStyle={mapContainerStyle}
-                center={{
-                  lat: 40.09005801617348,
-                  lng: -100.66383032528964,
-                }}
-                options={options}
-              ></GoogleMap>
-            </div>
-          </div>
-
-          ^ not working fix later
-
-          */}
+            <BusinessDetailsMap />
+          </div> */}
         </div>
       </div>
     </>
