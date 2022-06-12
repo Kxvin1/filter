@@ -55,6 +55,18 @@ const ReviewCard = ({ review, user }) => {
     "https://randomuser.me/api/portraits/men/22.jpg",
     "https://randomuser.me/api/portraits/men/97.jpg",
     "https://randomuser.me/api/portraits/women/34.jpg",
+    "https://randomuser.me/api/portraits/women/23.jpg",
+    "https://randomuser.me/api/portraits/women/22.jpg",
+    "https://randomuser.me/api/portraits/men/35.jpg",
+    "https://randomuser.me/api/portraits/men/16.jpg",
+    "https://randomuser.me/api/portraits/women/45.jpg",
+    "https://randomuser.me/api/portraits/women/50.jpg",
+    "https://randomuser.me/api/portraits/men/3.jpg",
+    "https://randomuser.me/api/portraits/women/63.jpg",
+    "https://randomuser.me/api/portraits/women/15.jpg",
+    "https://randomuser.me/api/portraits/men/10.jpg",
+    "https://randomuser.me/api/portraits/men/50.jpg",
+    "https://randomuser.me/api/portraits/men/83.jpg",
   ];
 
   return (
