@@ -29,10 +29,8 @@ const ReviewForm = ({ userId, businessId }) => {
       setReview("");
       setShowError(false);
 
-      //   document
-      //     .querySelector("#starRatings")
-      //     .scrollIntoView({ behavior: "smooth" });
-      window.scrollTo(500, 500);
+      window.scrollTo({ top: 1700, behavior: "smooth" });
+      alert("Review submitted!");
     }
   };
   return (
