@@ -40,9 +40,10 @@ const BusinessList = ({ business }) => {
 
   return (
     <div className="list-container">
+      {/* {console.log(business.images_business[0].url)} */}
       <div
         className="list-pic"
-        style={{ backgroundImage: `url(${business.images_business[0]})` }}
+        style={{ backgroundImage: `url(${business.images_business[0]?.url})` }}
       ></div>
       <div className="list-data">
         <Link className="list-title" to={`/businesses/${business?.id}`}>

@@ -175,6 +175,8 @@
 .images-in-the-container {
   width: 15em;
   border-radius: 10px;
+  max-width: 14em;
+  max-height: 14em;
 }
 
 .images-in-the-container:hover {

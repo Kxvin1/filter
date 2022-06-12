@@ -71,7 +71,7 @@ const NewBusinessForm = () => {
       )
     );
 
-    // console.log(cleanImages); // prints array of files
+    console.log(cleanImages, "clean images"); // prints array of files
 
     // console.log(businessData[1].user_id); // prints logged in user id
 

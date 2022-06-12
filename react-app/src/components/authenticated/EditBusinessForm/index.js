@@ -48,7 +48,7 @@ const EditBusinessForm = () => {
 
   useEffect(() => {
     let images = businessToEdit?.images_business.map((image) => {
-      return { data_url: image };
+      return { data_url: image.url };
     });
 
     setImages(images);

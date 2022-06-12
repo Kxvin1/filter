@@ -206,7 +206,7 @@ const BusinessDetails = () => {
               <img
                 className="images-in-the-container"
                 key={image.id}
-                src={image}
+                src={image.url}
                 alt={image.id}
                 // onClick={() => {
                 //   handlePhotos();
@@ -214,7 +214,7 @@ const BusinessDetails = () => {
 
                 // ! Old version of onClick in this img element below that works (add back if react bnb fails)
                 onClick={() => {
-                  openInNewTab(image);
+                  openInNewTab(image.url);
                 }}
               />
             ))}

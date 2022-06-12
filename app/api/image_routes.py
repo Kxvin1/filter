@@ -19,9 +19,10 @@ def load_images(id):
 
 
 # delete image
-@image_routes.route("/delete/<int:id>/", methods=["DELETE"])
+@image_routes.route("/delete/<int:id>", methods=["DELETE"])
 @login_required
 def delete_image(id):
+    # remove = Image.query.get(id)
     remove = Image.query.get(id)
     db.session.delete(remove)
     db.session.commit()

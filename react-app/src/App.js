@@ -24,13 +24,24 @@ import BusinessDetails from "./components/authenticated/BusinessDetails";
 import SearchBusiness from "./components/authenticated/SearchBusiness";
 import PageNotFound from "./components/PageNotFound";
 
-// import Directions from "./components/authenticated/Directions";
-import MapContainer from "./components/authenticated/MapContainer";
+import Directions from "./components/authenticated/Directions";
+import ImageGallery from "./components/authenticated/ImageGallery";
+// import MapContainer from "./components/authenticated/MapContainer";
+
+import {
+  GoogleMap,
+  Marker,
+  DirectionsRenderer,
+  Autocomplete,
+  useLoadScript,
+} from "@react-google-maps/api";
+
+const libraries = ["places"];
 
 function App() {
   const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch();
-  // const key = useSelector((state) => state.map.key);
+  const key = useSelector((state) => state.map.key);
 
   useEffect(() => {
     (async () => {
@@ -39,19 +50,19 @@ function App() {
     })();
   }, [dispatch]);
 
-  // useEffect(() => {
-  //   if (!key) {
-  //     dispatch(getKey());
-  //   }
-  // }, [dispatch, key]);
+  useEffect(() => {
+    if (!key) {
+      dispatch(getKey());
+    }
+  }, [dispatch, key]);
 
-  // const { isLoaded, loadError } = useLoadScript({
-  //   googleMapsApiKey: key,
-  //   libraries,
-  // });
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: key,
+    libraries,
+  });
 
-  // if (loadError) return "Error loading maps";
-  // if (!isLoaded) return "Loading Maps";
+  if (loadError) return "Error loading maps";
+  if (!isLoaded) return "Loading Maps";
 
   if (!loaded) {
     return null;
@@ -71,11 +82,15 @@ function App() {
         <ProtectedRoute path={`/businesses/edit/:businessId`}>
           <EditBusinessForm />
         </ProtectedRoute>
-        <ProtectedRoute path={`/businesses/:id`}>
+        <ProtectedRoute path="/businesses/:id" exact={true}>
           <BusinessDetails />
         </ProtectedRoute>
+        <ProtectedRoute path="/businesses/:id/gallery" exact={true}>
+          <ImageGallery />
+        </ProtectedRoute>
         <ProtectedRoute path={`/directions/:businessId`}>
-          {<MapContainer />}
+          {/* {<MapContainer />} */}
+          {key && <Directions />}
         </ProtectedRoute>
         <ProtectedRoute path={`/search/:id`}>
           <SearchBusiness />

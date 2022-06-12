@@ -67,6 +67,7 @@ class Business(db.Model):
             # "price": self.price,  # --> use later when implementing filtering by $/$$/$$$/$$$$
             "user": self.user.owner_info(),
             "images_business": [image.image_info() for image in self.images_business],
+            # "image_id": [image.image_id() for image in self.images_business],
             "ratingSum": sum(
                 [review.review_info()["rating"] for review in self.review]
             ),

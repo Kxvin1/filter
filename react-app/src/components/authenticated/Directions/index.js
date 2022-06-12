@@ -33,7 +33,7 @@ const options = {
 
 const libraries = ["places"];
 
-export default function Directions({ apiKey }) {
+export default function Directions() {
   const { businessId } = useParams();
   const dispatch = useDispatch();
   const [directionsResponse, setDirectionsResponse] = useState(null);
@@ -94,94 +94,92 @@ export default function Directions({ apiKey }) {
     const { lat, lng } = await getLatLng(res[0]);
   }
 
-  const { isLoaded, loadError } = useLoadScript({
-    id: "google-map-script",
-    googleMapsApiKey: apiKey,
-    libraries,
-  });
+  // const { isLoaded, loadError } = useLoadScript({
+  //   id: "google-map-script",
+  //   googleMapsApiKey: apiKey,
+  //   libraries,
+  // });
 
-  if (loadError) return "Error loading maps";
-  if (!isLoaded) return "Loading Maps";
+  // if (loadError) return "Error loading maps";
+  // if (!isLoaded) return "Loading Maps";
 
   return (
     <>
-      {isLoaded && (
-        <div>
-          <Banner />
-          <div className="main_content_directions">
-            <div className="directions_input_container">
-              <div>
-                <div className="directions_main_container">
-                  <div className="directions_distance_container">
-                    <h2>
-                      Distance to {`${business?.name}`}: {distance}
-                    </h2>
-                  </div>
-                  <div className="directions_duration_container">
-                    <h2>Drive Duration: {duration}</h2>
-                  </div>
-                  <div>
-                    <Link to={`/businesses/${business?.id}`}>
-                      Click to view {`${business?.name}'s`} business page!
-                    </Link>
-                  </div>
+      <div>
+        <Banner />
+        <div className="main_content_directions">
+          <div className="directions_input_container">
+            <div>
+              <div className="directions_main_container">
+                <div className="directions_distance_container">
+                  <h2>
+                    Distance to {`${business?.name}`}: {distance}
+                  </h2>
                 </div>
+                <div className="directions_duration_container">
+                  <h2>Drive Duration: {duration}</h2>
+                </div>
+                <div>
+                  <Link to={`/businesses/${business?.id}`}>
+                    Click to view {`${business?.name}'s`} business page!
+                  </Link>
+                </div>
+              </div>
 
-                <div className="input_div">
-                  <div className="origin_div">Origin: </div>
-                  <Autocomplete>
-                    <input ref={originRef}></input>
-                  </Autocomplete>
-                  <Autocomplete>
-                    <input
-                      ref={destinationRef}
-                      value={business?.address}
-                      className="directions_destination_input"
-                    ></input>
-                  </Autocomplete>
+              <div className="input_div">
+                <div className="origin_div">Origin: </div>
+                <Autocomplete>
+                  <input ref={originRef}></input>
+                </Autocomplete>
+                <Autocomplete>
+                  <input
+                    ref={destinationRef}
+                    value={business?.address}
+                    className="directions_destination_input"
+                  ></input>
+                </Autocomplete>
+              </div>
+              <div className="button_container">
+                <div>
+                  <button
+                    className="button_calculate"
+                    onClick={(e) => {
+                      calculateRoute();
+                      getCoordinates();
+                    }}
+                  >
+                    Calculate Driving Distance
+                  </button>
                 </div>
-                <div className="button_container">
-                  <div>
-                    <button
-                      className="button_calculate"
-                      onClick={(e) => {
-                        calculateRoute();
-                        getCoordinates();
-                      }}
-                    >
-                      Calculate Driving Distance
-                    </button>
-                  </div>
-                  <div>
-                    <button
-                      onClick={(e) => {
-                        clearRoute();
-                      }}
-                      className="button_clear"
-                    >
-                      Clear
-                    </button>
-                  </div>
+                <div>
+                  <button
+                    onClick={(e) => {
+                      clearRoute();
+                    }}
+                    className="button_clear"
+                  >
+                    Clear
+                  </button>
                 </div>
               </div>
             </div>
-            <div style={{ width: "100%", height: "85vh" }}>
-              <GoogleMap
-                mapContainerStyle={mapContainerStyle}
-                center={center}
-                zoom={zoom}
-                options={options}
-              >
-                {directionsResponse && (
-                  <DirectionsRenderer
-                    directions={directionsResponse}
-                  ></DirectionsRenderer>
-                )}
-              </GoogleMap>
-            </div>
+          </div>
+          <div style={{ width: "100%", height: "85vh" }}>
+            <GoogleMap
+              mapContainerStyle={mapContainerStyle}
+              center={center}
+              zoom={zoom}
+              options={options}
+            >
+              {directionsResponse && (
+                <DirectionsRenderer
+                  directions={directionsResponse}
+                ></DirectionsRenderer>
+              )}
+            </GoogleMap>
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 }
