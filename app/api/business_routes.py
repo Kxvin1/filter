@@ -28,7 +28,6 @@ def get():
 def add_business():
     form = NewBusinessForm()
     form["csrf_token"].data = request.cookies["csrf_token"]
-    print(form.validate_on_submit(), "~~~~~~~~~~~~~~~~~")
     if form.validate_on_submit():
         data = form.data
         business = Business(

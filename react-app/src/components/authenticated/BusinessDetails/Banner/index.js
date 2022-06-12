@@ -46,8 +46,6 @@ const BusinessDetailsBanner = ({ business, reviews }) => {
 
   const busRating = avgRating(business);
 
-  console.log(business, "business in banner details");
-
   return (
     <div className="business-details-banner-container">
       <div className="business-details-banner-content">

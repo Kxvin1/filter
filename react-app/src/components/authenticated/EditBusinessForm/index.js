@@ -18,7 +18,6 @@ const EditBusinessForm = () => {
   const businesses = useSelector((state) => Object.values(state?.businesses));
 
   const businessToEdit = useSelector((state) => state?.businesses[businessId]);
-  console.log(businessToEdit, "+++++++++++");
 
   const [name, setName] = useState(businessToEdit?.name);
   const [address, setAddress] = useState(businessToEdit?.address);
