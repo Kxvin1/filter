@@ -9,7 +9,7 @@
   color: #fff;
   transition: all 0.2s ease-in-out;
   border: 1px solid #090d0e;
-  background-color: rgb(190, 42, 70);
+  background-color: rgb(255, 10, 55);
   font-size: 1.07em;
 }
 
@@ -17,6 +17,7 @@
   color: #fff;
   transform: scale(1.06);
   cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 10, 55, 0.4);
 }
 
 .signup-btn-disabled {
