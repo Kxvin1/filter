@@ -11,7 +11,7 @@ import logo from "../../logo-images/yelp-500.png";
 import "./Header.css";
 
 function Header({ isLoaded }) {
-  const sessionUser = useSelector((state) => state.session.user);
+  const sessionUser = useSelector((state) => state?.session?.user);
   const dispatch = useDispatch();
   const history = useHistory();
 

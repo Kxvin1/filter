@@ -9,7 +9,7 @@ import "./PageNotFound.css";
 
 function PageNotFound() {
   const dispatch = useDispatch();
-  const sessionUser = useSelector((state) => state.session.user);
+  const sessionUser = useSelector((state) => state?.session?.user);
 
   //   need this so we can quick search from this component
   useEffect(() => {
@@ -25,7 +25,7 @@ function PageNotFound() {
           <div>
             {/* <h1 className="pnf-h1">FORBIDDEN</h1> */}
             <p className="page-not-found">
-              We’re sorry. We can’t find the page you’re looking for.
+              We're sorry. We can't find the page you're looking for.
             </p>
             {/* <p className="login-404-msg">
               Click on the Log In or Sign Up buttons right above to access this
@@ -64,7 +64,7 @@ function PageNotFound() {
           <div>
             {/* <h1 className="pnf-h1">FORBIDDEN</h1> */}
             <p className="page-not-found">
-              We’re sorry. We can’t find the page you’re looking for.
+              We're sorry. We can't find the page you're looking for.
             </p>
             <p className="login-404-msg">
               Click on the Log In or Sign Up buttons right above to access this

@@ -4,7 +4,7 @@ import Splash from "../SplashPage";
 import UserHome from "../authenticated";
 
 export default function Main() {
-  const user = useSelector((state) => state.session.user);
+  const user = useSelector((state) => state?.session?.user);
 
   let decideView;
 

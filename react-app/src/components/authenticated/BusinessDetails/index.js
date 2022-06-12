@@ -58,7 +58,7 @@ const BusinessDetails = () => {
   // console.log(businesses, "~~~~~~~~~~");
   // console.log(id);
 
-  const reviews = useSelector((state) => Object.values(state.reviews));
+  const reviews = useSelector((state) => Object.values(state?.reviews));
 
   //   const businesses = useSelector((state) => state.businessState.entries);
   //   const reviews = useSelector((state) => state.reviewState.entries);

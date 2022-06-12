@@ -10,7 +10,7 @@ import "./UserMain.css";
 
 const UserHome = () => {
   const dispatch = useDispatch();
-  const businesses = useSelector((state) => Object.values(state.businesses));
+  const businesses = useSelector((state) => Object.values(state?.businesses));
   // console.log(businesses, "state");
 
   useEffect(() => {

@@ -11,7 +11,7 @@ function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState([]);
-  const user = useSelector((state) => state.session.user);
+  const user = useSelector((state) => state?.session?.user);
 
   const clearForm = (e) => {
     setEmail("");

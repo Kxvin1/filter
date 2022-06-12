@@ -17,10 +17,10 @@ const EditBusinessForm = () => {
   const history = useHistory();
   const { businessId } = useParams();
 
-  const businesses = useSelector((state) => Object.values(state.businesses));
+  const businesses = useSelector((state) => Object.values(state?.businesses));
   // console.log(businesses, "state");
 
-  const businessToEdit = useSelector((state) => state.businesses[businessId]);
+  const businessToEdit = useSelector((state) => state?.businesses[businessId]);
   console.log(businessToEdit, "+++++++++++");
 
   // const businessToEdit = businesses.find((business) => {
@@ -43,7 +43,7 @@ const EditBusinessForm = () => {
   const [validationErrors, setValidationErrors] = useState([]);
   const [images, setImages] = useState(0);
 
-  const user = useSelector((state) => state.session.user);
+  const user = useSelector((state) => state?.session?.user);
   //   console.log(businessToEdit.id);
 
   useEffect(() => {
@@ -89,8 +89,8 @@ const EditBusinessForm = () => {
 
     // console.log(businessData);
 
-    const businessId = businessData[1].id;
-    const userId = businessData[1].user_id;
+    const businessId = businessData[1]?.id;
+    const userId = businessData[1]?.user_id;
 
     // console.log(businessId, "bus id");
     console.log(userId, "user id");

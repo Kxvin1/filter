@@ -10,9 +10,9 @@ import "./BusinessDetailsMap.css";
 const BusinessMap = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const businesses = useSelector((state) => Object.values(state.businesses));
+  const businesses = useSelector((state) => Object.values(state?.businesses));
   const business = businesses.find((business) => business.id === +id);
-  const key = useSelector((state) => state.map.key);
+  const key = useSelector((state) => state?.map?.key);
 
   useEffect(() => {
     dispatch(getBusinessesThunk());

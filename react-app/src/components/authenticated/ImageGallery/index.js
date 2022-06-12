@@ -11,8 +11,8 @@ const ImageGallery = () => {
   const history = useHistory();
   const dispatch = useDispatch();
   const { id } = useParams();
-  const user = useSelector((state) => state.session.user);
-  const businesses = useSelector((state) => Object.values(state.businesses));
+  const user = useSelector((state) => state?.session?.user);
+  const businesses = useSelector((state) => Object.values(state?.businesses));
   const business = businesses.find((business) => business.id === +id);
 
   //   console.log(id, "id");
@@ -50,7 +50,7 @@ const ImageGallery = () => {
           Photos for <span>&nbsp;</span>
           <span className="image-subtitle">
             <Link className="back-to-business-page" to={`/businesses/${id}`}>
-              {business.name}
+              {business?.name}
             </Link>
           </span>
         </h1>

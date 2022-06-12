@@ -3,7 +3,7 @@ import "./Footer.css";
 import { useSelector } from "react-redux";
 
 function Footer() {
-  const user = useSelector((state) => state.session.user);
+  const user = useSelector((state) => state?.session?.user);
 
   let decideView;
 

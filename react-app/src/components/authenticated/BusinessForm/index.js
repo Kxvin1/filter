@@ -31,7 +31,7 @@ const NewBusinessForm = () => {
   const [validationErrors, setValidationErrors] = useState([]);
   const [images, setImages] = useState("");
 
-  const user = useSelector((state) => state.session.user);
+  const user = useSelector((state) => state?.session?.user);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -75,13 +75,12 @@ const NewBusinessForm = () => {
 
     // console.log(businessData[1].user_id); // prints logged in user id
 
-    const businessId = businessData[1].id;
-    const userId = businessData[1].user_id;
+    const businessId = businessData[1]?.id;
+    const userId = businessData[1]?.user_id;
 
     await addImages(cleanImages, businessId, userId);
     window.alert("Business posted. Redirecting you to your page!"); // temp alert replace with toastify
-    history.push(`/`); // temp, change to below when component is up
-    // history.push(`$/businesses/${businessId}`);
+    history.push(`/businesses/${businessId}`); // temp, change to below when component is up
   };
 
   useEffect(() => {

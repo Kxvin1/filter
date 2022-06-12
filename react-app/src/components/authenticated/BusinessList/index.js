@@ -12,13 +12,13 @@ const BusinessList = ({ business }) => {
   let phone = "";
 
   if (business?.phone_number) {
-    phone = formatPhone(business.phone_number);
+    phone = formatPhone(business?.phone_number);
   }
 
   const avgRating = (business) => {
-    let ratingS = business.ratingSum;
+    let ratingS = business?.ratingSum;
 
-    let ratingL = business.ratingLen;
+    let ratingL = business?.ratingLen;
 
     const ratingAvg = ratingS / ratingL;
 
@@ -43,7 +43,7 @@ const BusinessList = ({ business }) => {
       {/* {console.log(business.images_business[0].url)} */}
       <div
         className="list-pic"
-        style={{ backgroundImage: `url(${business.images_business[0]?.url})` }}
+        style={{ backgroundImage: `url(${business?.images_business[0]?.url})` }}
       ></div>
       <div className="list-data">
         <Link className="list-title" to={`/businesses/${business?.id}`}>

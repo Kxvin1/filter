@@ -17,9 +17,9 @@ const BusinessDetailsBanner = ({ business, reviews }) => {
   }, []);
 
   const avgRating = (business) => {
-    let ratingS = business.ratingSum;
+    let ratingS = business?.ratingSum;
 
-    let ratingL = business.ratingLen;
+    let ratingL = business?.ratingLen;
 
     const ratingAvg = ratingS / ratingL;
 

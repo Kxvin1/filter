@@ -6,7 +6,7 @@ import Directions from "../Directions";
 
 const MapContainer = () => {
   const dispatch = useDispatch();
-  const key = useSelector((state) => state.map.key);
+  const key = useSelector((state) => state?.map?.key);
 
   useEffect(() => {
     window.scrollTo(2000, 2000);
