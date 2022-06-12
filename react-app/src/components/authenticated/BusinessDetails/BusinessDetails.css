@@ -3,6 +3,7 @@
   padding-bottom: 30px;
   display: flex;
   justify-content: center;
+  transition: all 0.8s;
 }
 
 .photos-h2 {
@@ -20,11 +21,14 @@
 .action-button {
   display: block;
   margin-left: 1em;
+  transition: all 0.8s;
 }
 
 .action-button:hover {
   color: #fff;
-  background-color: #ff9900;
+  /* background-color: #ff9900; */
+  opacity: 0.95;
+  box-shadow: 0 5px 15px rgba(33, 32, 32, 0.4);
   /* transform: scale(1.06); */
   /* box-shadow: 0 5px 15px rgba(255, 10, 55, 0.4); */
 }
@@ -116,7 +120,7 @@
     background-color: #0e0f10;
     border: 1.4px solid rgb(160, 158, 158);
     /* border: 2px solid #205a79; */
-    transition: color 0.15s ease-in-out;
+    transition: all 0.8s ease-in-out;
     box-sizing: border-box;
     padding: 10px 10px;
     font-size: 14px;
@@ -304,7 +308,9 @@ a {
   background-color: rgb(249, 19, 27);
 }
 .css-4ut3yi:hover {
-  background-color: #ff9900;
+  /* background-color: #ff9900; */
+  opacity: 0.95;
+  box-shadow: 0 5px 15px rgba(33, 32, 32, 0.4);
   color: rgba(255, 255, 255, 1);
 }
 .css-110vchp {

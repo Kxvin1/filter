@@ -347,7 +347,8 @@ span {
   background-color: rgb(249, 19, 27);
 }
 .css-cednmx:hover {
-  background-color: #ff9900;
+  opacity: 0.95;
+  box-shadow: 0 5px 15px rgba(33, 32, 32, 0.4);
   color: rgba(255, 255, 255, 1);
 }
 .css-1enow5j {
