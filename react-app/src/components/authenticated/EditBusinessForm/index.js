@@ -82,7 +82,7 @@ const EditBusinessForm = () => {
     const userId = businessData[1]?.user_id;
 
     await addImages(images, businessId, userId);
-    window.alert("Edit successful. Redirecting to your updated page."); // temp alert replace with toastify
+    window.alert("Edit Successful. Redirecting to your updated page."); // temp alert replace with toastify
     history.push(`/businesses/${businessId}`);
   };
 

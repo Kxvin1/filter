@@ -75,7 +75,7 @@ const NewBusinessForm = () => {
     const userId = businessData[1]?.user_id;
 
     await addImages(cleanImages, businessId, userId);
-    window.alert("Business posted. Redirecting you to your page!"); // temp alert replace with toastify
+    window.alert("Business Added. Redirecting to your page."); // temp alert replace with toastify
     history.push(`/businesses/${businessId}`);
   };
 
