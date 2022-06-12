@@ -7,7 +7,7 @@ import "./SearchBusiness.css";
 
 const SearchBusiness = () => {
   const { id } = useParams();
-  const businesses = useSelector((state) => Object.values(state.businesses));
+  const businesses = useSelector((state) => Object.values(state?.businesses));
 
   const [resultsState, setResultsState] = useState([]);
 
