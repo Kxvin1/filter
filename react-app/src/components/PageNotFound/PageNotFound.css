@@ -66,11 +66,8 @@
 .pnf-visit-these a {
   font-size: 20px;
   color: #008489;
-  /* margin: 0.5em; */
   margin-bottom: 0.5em;
   margin-top: 1em;
-  /* width: fit-content; */
-  /* display: block; */
 }
 
 .pnf-visit-these a:hover {

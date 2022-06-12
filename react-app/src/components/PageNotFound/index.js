@@ -23,14 +23,9 @@ function PageNotFound() {
       <div className="page-not-found-container">
         <div className="page-not-found-stuff">
           <div>
-            {/* <h1 className="pnf-h1">FORBIDDEN</h1> */}
             <p className="page-not-found">
               We're sorry. We can't find the page you're looking for.
             </p>
-            {/* <p className="login-404-msg">
-              Click on the Log In or Sign Up buttons right above to access this
-              page!
-            </p> */}
             <p className="login-404-msg">
               Here are some helpful links instead:
             </p>
@@ -62,7 +57,6 @@ function PageNotFound() {
       <div className="page-not-found-container">
         <div className="page-not-found-stuff">
           <div>
-            {/* <h1 className="pnf-h1">FORBIDDEN</h1> */}
             <p className="page-not-found">
               We're sorry. We can't find the page you're looking for.
             </p>

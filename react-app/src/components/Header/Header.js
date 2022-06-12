@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
@@ -6,7 +6,6 @@ import LoginFormModal from "../LoginFormModal";
 import SignupFormModal from "../SignUpFormModal";
 import * as sessionActions from "../../store/session";
 import logo from "../../logo-images/yelp-500.png";
-// import Search from "./Search";
 
 import "./Header.css";
 
@@ -27,7 +26,6 @@ function Header({ isLoaded }) {
   if (sessionUser) {
     defaultLinks = (
       <>
-        {/* <Search /> component goes here */}
         <h2 className="greeting-message-nav">
           Hello, {sessionUser?.username}!
         </h2>

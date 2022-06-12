@@ -94,7 +94,6 @@ export const editBusinessThunk = (data, businessId) => async (dispatch) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
   });
-  // console.log(response, "~~~~~~~~~~~~~~~~~~~");
   if (response.ok) {
     const editedBusiness = await response.json();
     dispatch(editBusiness(editedBusiness));
@@ -113,7 +112,7 @@ export const deleteBusinessThunk = (businessId) => async (dispatch) => {
   }
 };
 
-// for s3 --> image_routes.py
+// for aws s3 --> image_routes.py
 export const uploadFile = (fileForm) => async (dispatch) => {
   const { business_id, user_id, file, newFile } = fileForm;
 
@@ -128,8 +127,6 @@ export const uploadFile = (fileForm) => async (dispatch) => {
     body: form,
   });
 };
-
-// reducers.
 
 const initialState = {};
 

@@ -16,9 +16,7 @@
 }
 
 .login-btn-modal:hover {
-  /* color: #504b47; */
   background-color: #e8e8e8bb;
-  /* transform: scale(1.2); */
   cursor: pointer;
 }
 

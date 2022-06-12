@@ -4,14 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import { authenticate } from "./store/session";
 
-// not using these
-import LoginForm from "./components/auth/LoginForm";
-import SignUpForm from "./components/auth/SignUpForm";
-import NavBar from "./components/NavBar";
-import UsersList from "./components/UsersList";
-import User from "./components/User";
-// not using these
-
 import { getKey } from "./store/key";
 
 // ! import components here
@@ -26,15 +18,8 @@ import PageNotFound from "./components/PageNotFound";
 
 import Directions from "./components/authenticated/Directions";
 import ImageGallery from "./components/authenticated/ImageGallery";
-// import MapContainer from "./components/authenticated/MapContainer";
 
-import {
-  GoogleMap,
-  Marker,
-  DirectionsRenderer,
-  Autocomplete,
-  useLoadScript,
-} from "@react-google-maps/api";
+import { useLoadScript } from "@react-google-maps/api";
 
 const libraries = ["places"];
 
@@ -89,7 +74,6 @@ function App() {
           <ImageGallery />
         </ProtectedRoute>
         <ProtectedRoute path={`/directions/:businessId`}>
-          {/* {<MapContainer />} */}
           {key && <Directions />}
         </ProtectedRoute>
         <ProtectedRoute path={`/search/:id`}>
