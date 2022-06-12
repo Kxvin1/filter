@@ -26,7 +26,7 @@ export default function Map(props) {
         return (
           <div className="search-container">
             <input
-              {...getInputProps({ placeholder: "Type address" })}
+              {...getInputProps({ placeholder: "Address" })}
               className="search-input"
               required
             />
