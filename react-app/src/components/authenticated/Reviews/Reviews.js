@@ -42,40 +42,15 @@ const Reviews = ({ businessId, reviews, user }) => {
   };
 
   const avgRatings = calculateAvgRatings();
-  // console.log(avgRatings, "avgRatings");
 
   return (
     <>
       <div className="review-title-container">
-        {/* <h2 className="reviews-h2">Reviews</h2> */}
         {reviews.length ? (
           <h2 className="reviews-h2">Recommended Reviews</h2>
         ) : (
           <h2 className="reviews-h2">No Reviews</h2>
         )}
-
-        {/* <div className="starBox">
-        <div>
-          {reviews.length ? (
-            <div className="starAvgs">
-              <div>
-              Rating
-              <div className="bar">
-              <div className="full">
-                    <div
-                      className="reviewBar"
-                      // style={{ width: `${avgRatings[1] * 24}px` }}
-                      ></div>
-                      </div>
-                      <div className="avgRatingPerCategory">{avgRatings[1]}</div>
-                      </div>
-                      </div>
-                      </div>
-                      ) : (
-                          ""
-                          )}
-                          </div>
-                        </div> */}
       </div>
       <div className="allReviewsContainer">
         {sortedReviews.map((review) => (

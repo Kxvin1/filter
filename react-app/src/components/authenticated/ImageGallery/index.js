@@ -15,8 +15,6 @@ const ImageGallery = () => {
   const businesses = useSelector((state) => Object.values(state?.businesses));
   const business = businesses.find((business) => business.id === +id);
 
-  //   console.log(id, "id");
-
   useEffect(() => {
     dispatch(getBusinessesThunk());
   }, [dispatch]);
@@ -58,7 +56,6 @@ const ImageGallery = () => {
       <div className="outside-grid">
         {business?.images_business?.map((image, idx) => (
           <figure key={idx}>
-            {/* {console.log(business?.images_business, "business.images_business")} */}
             <img
               className="image-spread"
               alt={`filter-${image.id}`}

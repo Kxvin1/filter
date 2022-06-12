@@ -28,11 +28,6 @@ const BusinessList = ({ business }) => {
       return 0;
     }
 
-    // this is temporary, will make the review seeds have a higher chance of leaving a review of 4 or higher
-    // if (totalAvg >= 5) {
-    //   totalAvg = Math.random() * (4.9 - 4.4) + 4.4;
-    // }
-
     return totalAvg.toFixed(1).toString();
   };
 
@@ -40,7 +35,6 @@ const BusinessList = ({ business }) => {
 
   return (
     <div className="list-container">
-      {/* {console.log(business.images_business[0].url)} */}
       <div
         className="list-pic"
         style={{ backgroundImage: `url(${business?.images_business[0]?.url})` }}
@@ -59,7 +53,6 @@ const BusinessList = ({ business }) => {
             <span className="number-star-rating">{busRating}</span>
           </span>
         </Link>
-        {/* <p className="list-info">Phone Number: </p> {phone} */}
         <span className="info_window_phone">
           <img
             src={phoneSvg}
@@ -73,7 +66,6 @@ const BusinessList = ({ business }) => {
           ></img>
           <span className="number-phone-svg">{phone}</span>
         </span>
-        {/* <p className="list-info">Business Address: </p> {business?.address} */}
         <span className="info_window_phone">
           <img
             src={directionsSvg}

@@ -14,15 +14,7 @@ import {
   deleteBusinessThunk,
   getBusinessesThunk,
 } from "../../../store/business";
-import { loadReviewsThunk, deleteReviewThunk } from "../../../store/review";
-
-import {
-  GoogleMap,
-  Marker,
-  DirectionsRenderer,
-  Autocomplete,
-  InfoWindow,
-} from "@react-google-maps/api";
+import { loadReviewsThunk } from "../../../store/review";
 
 import mapStyles from "../mapStyles";
 
@@ -32,11 +24,6 @@ import Reviews from "../Reviews/Reviews";
 import BusinessDetailsMap from "../BusinessDetailsMap";
 
 import "./BusinessDetails.css";
-
-const mapContainerStyle = {
-  width: "100%",
-  height: "100%",
-};
 
 const options = {
   styles: mapStyles,
@@ -55,20 +42,9 @@ const BusinessDetails = () => {
 
   const businesses = useSelector((state) => Object.values(state?.businesses));
 
-  // console.log(businesses, "~~~~~~~~~~");
-  // console.log(id);
-
   const reviews = useSelector((state) => Object.values(state?.reviews));
 
-  //   const businesses = useSelector((state) => state.businessState.entries);
-  //   const reviews = useSelector((state) => state.reviewState.entries);
-
   const business = businesses.find((business) => business?.id === +id);
-
-  console.log(business, "single business");
-
-  // console.log(user?.id, "logged in user");
-  // console.log(business?.user_id, "owner of the business user");
 
   const formatPhone = (number) => {
     return number.replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
@@ -87,31 +63,14 @@ const BusinessDetails = () => {
     })();
   }, [dispatch, id]);
 
-  // functional but lacks confirmation modal
   const handleDeleteBusiness = async (e) => {
     e.preventDefault();
 
     await dispatch(deleteBusinessThunk(id));
 
-    // add a modal to this, right now just deletes without any confirmation
-
-    // add some alert/react toast
     alert("Business successfully deleted!");
     history.push("/");
   };
-
-  // not needed
-  // const handleDeleteReview = async (e) => {
-  //   e.preventDefault();
-
-  //   let reviewToDeleteId = parseInt(e.target.id, 10);
-  //   const payload = {
-  //     reviewToDeleteId,
-  //     businessId: id,
-  //   };
-
-  //   await dispatch(deleteReviewThunk(payload));
-  // };
 
   const handlePhotos = (photosIndex) => {
     if (!photoObject.length) {
@@ -159,10 +118,6 @@ const BusinessDetails = () => {
       <div className="business-details-container">
         <div>
           <div className="crud-buttons">
-            {/* <Link className="action-button" onClick={() => scrollToBottom()}>
-              Write a Review
-            </Link> */}
-
             {/* start test area */}
 
             <Link
@@ -228,14 +183,14 @@ const BusinessDetails = () => {
                 key={image.id}
                 src={image.url}
                 alt={image.id}
-                // onClick={() => {
-                //   handlePhotos();
-                // }}
-
-                // ! Old version of onClick in this img element below that works (add back if react bnb fails)
                 onClick={() => {
                   openInNewTab(image.url);
                 }}
+
+                // ! Comment in if using reactbnbgallery
+                // onClick={() => {
+                //   handlePhotos();
+                // }}
               />
             ))}
           </div>
@@ -737,9 +692,6 @@ const BusinessDetails = () => {
               </Link>
             </div>
           </div>
-          {/* <div className="business-map">
-            <BusinessDetailsMap />
-          </div> */}
         </div>
       </div>
     </>

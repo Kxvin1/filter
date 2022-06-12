@@ -1,7 +1,6 @@
 .business-details-banner-container {
   height: 40vh;
   background-image: url("../../../../logo-images/grid-collage-2.jpg");
-  /* background-position: center; */
   background-position: center bottom, left top;
   background-size: cover;
   display: flex;
@@ -56,7 +55,6 @@
 .banner-inner-p {
   color: white;
   font-size: 20px;
-  /* margin-top: 5px; */
   margin-top: 0.4em;
   margin-bottom: 5px;
   margin-left: 3px;
@@ -82,10 +80,6 @@
   -webkit-background-clip: text;
   color: transparent;
 }
-
-/* .info_window_star {
-  color: white;
-} */
 
 .open-text-banner {
   color: rgba(2, 161, 109, 1);

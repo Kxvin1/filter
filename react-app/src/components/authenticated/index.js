@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getBusinessesThunk } from "../../store/business";
 
-// Import components
 import Banner from "./Banner";
 import BusinessList from "./BusinessList";
 
@@ -11,7 +10,6 @@ import "./UserMain.css";
 const UserHome = () => {
   const dispatch = useDispatch();
   const businesses = useSelector((state) => Object.values(state?.businesses));
-  // console.log(businesses, "state");
 
   useEffect(() => {
     dispatch(getBusinessesThunk());

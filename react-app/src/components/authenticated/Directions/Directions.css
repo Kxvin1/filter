@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-items: center;
   justify-content: center;
-  /* grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr)); */
   grid-gap: 2.2rem;
   margin-top: 2rem;
   margin-bottom: 1rem;

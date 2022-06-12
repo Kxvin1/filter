@@ -7,10 +7,8 @@ import {
   uploadFile,
   getUserBusinesses,
 } from "../../../store/business";
-// import { getUserBusinesses } from "../../../store/your_businesses";
 
 import Map from "../BusinessForm/Map";
-// import "./BusinessForm.css";
 
 const EditBusinessForm = () => {
   const dispatch = useDispatch();
@@ -18,14 +16,9 @@ const EditBusinessForm = () => {
   const { businessId } = useParams();
 
   const businesses = useSelector((state) => Object.values(state?.businesses));
-  // console.log(businesses, "state");
 
   const businessToEdit = useSelector((state) => state?.businesses[businessId]);
   console.log(businessToEdit, "+++++++++++");
-
-  // const businessToEdit = businesses.find((business) => {
-  //   return business?.id.toString() === businessId;
-  // });
 
   const [name, setName] = useState(businessToEdit?.name);
   const [address, setAddress] = useState(businessToEdit?.address);
@@ -44,7 +37,6 @@ const EditBusinessForm = () => {
   const [images, setImages] = useState(0);
 
   const user = useSelector((state) => state?.session?.user);
-  //   console.log(businessToEdit.id);
 
   useEffect(() => {
     let images = businessToEdit?.images_business.map((image) => {
@@ -87,13 +79,8 @@ const EditBusinessForm = () => {
       editBusinessThunk(data, businessToEdit.id)
     );
 
-    // console.log(businessData);
-
     const businessId = businessData[1]?.id;
     const userId = businessData[1]?.user_id;
-
-    // console.log(businessId, "bus id");
-    console.log(userId, "user id");
 
     await addImages(images, businessId, userId);
     window.alert("Edit successful. Redirecting to your updated page."); // temp alert replace with toastify
@@ -106,8 +93,6 @@ const EditBusinessForm = () => {
 
       let newFile = false;
       let file;
-
-      console.log(image, "IMAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
       if (image.file) {
         // if there is a file, this is a new/updated upload
@@ -123,8 +108,6 @@ const EditBusinessForm = () => {
         user_id: user_id,
         newFile: newFile,
       };
-
-      console.log(obj, "obj");
 
       await dispatch(uploadFile(obj));
     }

@@ -104,7 +104,6 @@ const ReviewCard = ({ review, user }) => {
             <div className="x" onClick={closeForm}>
               <i className="fas fa-times"></i>
             </div>
-            {/* <h2>Delete</h2> */}
             <h4 className="delete-your-review-confirmation-text">
               Delete Your Review?
             </h4>
@@ -123,7 +122,6 @@ const ReviewCard = ({ review, user }) => {
             <div className="x" onClick={closeForm}>
               <i className="fas fa-times"></i>
             </div>
-            {/* <h2>Change your mind?</h2> */}
             <div className="starRatings">
               <div className="starTitle">Edit Rating & Review</div>
               <Rating
@@ -134,7 +132,6 @@ const ReviewCard = ({ review, user }) => {
             </div>
             <div>
               <form className="commentForm" onSubmit={editReview}>
-                {/* <label>Edit Review</label> */}
                 <textarea
                   className="commentBox"
                   name="description"

@@ -29,11 +29,6 @@ const BusinessDetailsBanner = ({ business, reviews }) => {
       return;
     }
 
-    // this is temporary, will make the review seeds have a higher chance of leaving a review of 4 or higher
-    // if (totalAvg >= 5) {
-    //   totalAvg = Math.random() * (4.9 - 4.4) + 4.4;
-    // }
-
     return totalAvg.toFixed(1).toString();
   };
 
@@ -61,10 +56,8 @@ const BusinessDetailsBanner = ({ business, reviews }) => {
           <span className="stars" style={{ "--rating": `${rating}` }}>
             <span className="number-star-rating-banner-business-details">
               {busRating} <span>{reviewTextCounter}</span>
-              {/* <span className="banner-inner-p">{reviews.length} reviews</span> */}
             </span>
           </span>
-          {/* <p className="banner-inner-p">{reviews.length} reviews </p> */}
           <span className="banner-inner-p">
             <span className="open-text-banner">Open:</span> 8:00 AM - 4:00 PM
           </span>

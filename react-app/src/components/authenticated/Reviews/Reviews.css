@@ -1,6 +1,4 @@
 .allReviewsContainer {
-  /* display: grid; */
-  /* grid-template-columns: 2fr 2fr; */
   margin: 0 0 0 50px;
 }
 
@@ -152,9 +150,6 @@
 }
 
 .rating {
-  /* display: flex; */
-  /* justify-content: flex-end; */
-  /* position: relative; */
   margin-top: 2em;
 }
 

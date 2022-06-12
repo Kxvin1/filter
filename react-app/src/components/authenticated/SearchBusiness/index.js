@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import BusinessList from "../BusinessList/index";
@@ -8,10 +8,6 @@ import "./SearchBusiness.css";
 const SearchBusiness = () => {
   const { id } = useParams();
   const businesses = useSelector((state) => Object.values(state?.businesses));
-
-  const [resultsState, setResultsState] = useState([]);
-
-  //   console.log(businesses, "businesses search");
 
   function returnArrayOfBusinesses(businessesObj) {
     const finalArray = [];
@@ -62,10 +58,6 @@ const SearchBusiness = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  console.log(searchResults.length, "sr .length");
-
-  // if (!searchResults.length) setResultsState(searchResults);
 
   if (searchResults.length) {
     return (

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Rating } from "react-simple-star-rating";
 import { useDispatch } from "react-redux";
 import { addNewReviewThunk } from "../../../store/review";
@@ -60,16 +60,10 @@ const ReviewForm = ({ userId, businessId }) => {
               Please fill out a star rating as well as a comment!
             </div>
           )}
-          {/* <button className="modifyBtn" type="submit">
-            New Review
-          </button> */}
 
           {/* start testing section */}
 
-          <div
-            class=" margin-t4__09f24__G0VVf padding-b6__09f24__hfdiP border-color--default__09f24__NPAKY"
-            // style="max-width:200px"
-          >
+          <div class=" margin-t4__09f24__G0VVf padding-b6__09f24__hfdiP border-color--default__09f24__NPAKY">
             <button
               type="submit"
               class=" css-cednmx"
@@ -77,7 +71,6 @@ const ReviewForm = ({ userId, businessId }) => {
               data-testid="post-button"
               value="submit"
               data-button="true"
-              // style=""
             >
               <span class="css-1enow5j" data-font-weight="semibold">
                 Post Review

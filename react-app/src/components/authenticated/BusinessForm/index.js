@@ -71,16 +71,12 @@ const NewBusinessForm = () => {
       )
     );
 
-    console.log(cleanImages, "clean images"); // prints array of files
-
-    // console.log(businessData[1].user_id); // prints logged in user id
-
     const businessId = businessData[1]?.id;
     const userId = businessData[1]?.user_id;
 
     await addImages(cleanImages, businessId, userId);
     window.alert("Business posted. Redirecting you to your page!"); // temp alert replace with toastify
-    history.push(`/businesses/${businessId}`); // temp, change to below when component is up
+    history.push(`/businesses/${businessId}`);
   };
 
   useEffect(() => {
