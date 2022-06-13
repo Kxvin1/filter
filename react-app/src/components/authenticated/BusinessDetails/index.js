@@ -105,10 +105,12 @@ const BusinessDetails = () => {
   let numberOfPhotosText;
 
   if (business?.images_business?.length === 1) {
-    numberOfPhotosText = <span>See 1 photo</span>;
+    numberOfPhotosText = <span>See 1 Photo</span>;
+  } else if (business?.images_business?.length === 0) {
+    numberOfPhotosText = <span>No Business Photos</span>;
   } else {
     numberOfPhotosText = (
-      <span>See {business?.images_business?.length} photos</span>
+      <span>See {business?.images_business?.length} Photos</span>
     );
   }
 
