@@ -106,16 +106,15 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 
 ![Home Page Authenticated](https://i.imgur.com/y1AHScb.jpeg)
 
-- When hovering over a listing a shadow will appear to let the user know which shop is the point of focus.
-- Clicking on 'Business Details' will redirect the user to that specific shop's details page.
-
 - Home Page
 
 ![Home Page Splash](https://i.imgur.com/4a1N2VG.jpeg)
 
-- Hovered over a single business
+- When hovering over a listing a shadow will appear to let the user know which shop is the point of focus.
 
 ![Hover Home](https://i.imgur.com/UYBknkS.png)
+
+- Clicking on 'Business Details' will redirect the user to that specific shop's details page.
 
 ## Business Details
 
@@ -169,7 +168,7 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 ![Delete Review Modal](https://i.imgur.com/zCPieES.png)
 
 ### Business Owner
-- If the logged in user does own the business, they gain additional functionality in addition to all the functionality as a non owner, in addition to the regular 'Write Review' and 'See Photos' buttons:
+- If the logged in user does own the business, they gain additional functionality in addition to all the functionality as a non owner:
    - Business owners can edit the business listing details
    - Business owners can delete the business listing
    - If a business owner clicks on 'See Photos' they are redirected to the same page but this time can delete any photo even if they are not the owner of the photo
@@ -190,12 +189,12 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 
 - In 'Add a Business' a User can create their own Business listing.
 - Users can add images via drag and drop
-- Address and latitude and longitude are automatically filled out via Google Maps API
+- Address, latitude and longitude are automatically filled out via Google Maps API once the user selects a location
 - Proper error handling to ensure all information is input correctly and within the site boundaries
 
 ![Post A Business](https://i.imgur.com/p5h8YmP.png)
 
-- A User can also edit a listing
+- A User that owns the business listing can also edit the business details
 - The layout and functionality is similar to the Add a Business page, also has the same error handling
 
 ![Edit a Business](https://i.imgur.com/y9A3oLa.png)
@@ -208,7 +207,7 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 
 ![Directions 1](https://i.imgur.com/ZI6aTXu.jpeg)
 
-- With origin input
+- With origin input (auto zooms and pans to make viewing easier)
 
 ![Directions 2](https://i.imgur.com/66c1aCh.jpeg)
 
@@ -221,9 +220,13 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 
 ## 404 (User logged out)
 
+- Displays a 404 page if a user lands on a page that doesn't exist while logged out
+
 ![404 logged out](https://i.imgur.com/RLK8eof.png)
 
 ## 404 (User logged in)
+
+- Displays a 404 page if a user lands on a page that doesn't exist while logged out with relevant links since they are logged in
 
 ![404 logged in](https://i.imgur.com/KbmGelW.png)
 
