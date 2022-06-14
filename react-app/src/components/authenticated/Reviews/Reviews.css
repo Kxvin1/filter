@@ -413,3 +413,9 @@ span {
     url(https://s3-media0.fl.yelpcdn.com/assets/public/poppins-bold.yji-0a53cdc68b4438be7b7d.woff)
       format("woff");
 }
+
+.error_li {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 1em;
+}

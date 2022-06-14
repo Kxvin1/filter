@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Rating } from "react-simple-star-rating";
 import { useDispatch } from "react-redux";
 import { addNewReviewThunk } from "../../../store/review";
@@ -9,9 +9,14 @@ const ReviewForm = ({ userId, businessId }) => {
   const [rating, setRating] = useState(0);
   const [review, setReview] = useState("");
   const [showError, setShowError] = useState(false);
+  const [validationErrors, setValidationErrors] = useState([]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (validationErrors.length > 0) {
+      return;
+    }
 
     if (!rating || !review) {
       setShowError(true);
@@ -33,6 +38,16 @@ const ReviewForm = ({ userId, businessId }) => {
       alert("Review submitted!");
     }
   };
+
+  // useEffect(() => {
+  //   const errors = [];
+
+  //   if (review.length > 1500)
+  //     errors.push("Review too long (maximum 1500 characters)");
+
+  //   setValidationErrors(errors);
+  // }, [review]);
+
   return (
     <>
       <form className="reviewForm" onSubmit={handleSubmit}>
@@ -45,6 +60,16 @@ const ReviewForm = ({ userId, businessId }) => {
           />
         </div>
         <div className="commentForm">
+          <div className="error_container_div">
+            <ul className="error_container">
+              {validationErrors.length > 0 &&
+                validationErrors.map((error) => (
+                  <li className="error_li" key={error} style={{ color: "red" }}>
+                    {error}
+                  </li>
+                ))}
+            </ul>
+          </div>
           <label>Share your experience!</label>
           <textarea
             className="commentBoxInput"

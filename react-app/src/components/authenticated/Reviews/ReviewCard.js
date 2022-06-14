@@ -9,6 +9,7 @@ const ReviewCard = ({ review, user }) => {
   const [reviewState, setReviewState] = useState("");
   const [showEdit, setShowEdit] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
+  const [validationErrors, setValidationErrors] = useState([]);
 
   useEffect(() => {
     setRating(review?.rating * 2 * 10);
@@ -23,6 +24,10 @@ const ReviewCard = ({ review, user }) => {
   const editReview = async (e) => {
     e.preventDefault();
 
+    if (validationErrors.length > 0) {
+      return;
+    }
+
     const data = await dispatch(
       editReviewThunk(review.id, reviewState, rating)
     );
@@ -36,6 +41,15 @@ const ReviewCard = ({ review, user }) => {
     setShowEdit(false);
     setShowDelete(false);
   };
+
+  // useEffect(() => {
+  //   const errors = [];
+
+  //   if (review.review.length > 1500)
+  //     errors.push("Review too long (maximum 1500 characters)");
+
+  //   setValidationErrors(errors);
+  // }, [review.review.length]);
 
   const avatars = [
     "https://randomuser.me/api/portraits/women/8.jpg", // not used
@@ -123,7 +137,24 @@ const ReviewCard = ({ review, user }) => {
               <i className="fas fa-times"></i>
             </div>
             <div className="starRatings">
-              <div className="starTitle">Edit Rating & Review</div>
+              <div className="starTitle">
+                Edit Rating & Review
+                <div className="error_container_div">
+                  <ul className="error_container">
+                    {console.log(validationErrors, "validation errors")}
+                    {validationErrors.length > 0 &&
+                      validationErrors.map((error) => (
+                        <li
+                          className="error_li"
+                          key={error}
+                          style={{ color: "red" }}
+                        >
+                          {error}
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              </div>
               <Rating
                 onClick={(rating) => setRating(rating)}
                 ratingValue={rating}
