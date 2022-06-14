@@ -124,9 +124,9 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 
 ### Non Business Owner
 - If the logged in user does not own the business, this is the page they see and the functionality of the page.
-      - On the left are two buttons 'Write Review' and 'See Photos'
-      - If Write Review is clicked the user is scrolled to the review section.
-      - If See Photos is clicked the user is redirected to a page containing of all the business' photos.
+    - On the left are two buttons 'Write Review' and 'See Photos'
+    - If Write Review is clicked the user is scrolled to the review section.
+    - If See Photos is clicked the user is redirected to a page containing of all the business' photos.
    - On the right is a section that displays the business' website, phone number, and directions to their business address.
    - Below those two is an interactive Google Map displaying the location of the business that the user can interact with.
 
@@ -165,11 +165,11 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 ![Edit Review Modal](https://i.imgur.com/RTFkcUp.png)
 
 - Delete Review Modal
+
 ![Delete Review Modal](https://i.imgur.com/zCPieES.png)
 
 ### Business Owner
-- If the logged in user does own the business, they gain additional functionality in addition to all the functionality as a non owner.
-   - In addition to the regular 'Write Review' and 'See Photos' buttons
+- If the logged in user does own the business, they gain additional functionality in addition to all the functionality as a non owner, in addition to the regular 'Write Review' and 'See Photos' buttons:
    - Business owners can edit the business listing details
    - Business owners can delete the business listing
    - If a business owner clicks on 'See Photos' they are redirected to the same page but this time can delete any photo even if they are not the owner of the photo
@@ -193,18 +193,18 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 - Address and latitude and longitude are automatically filled out via Google Maps API
 - Proper error handling to ensure all information is input correctly and within the site boundaries
 
-![Post A Business](https://i.imgur.com/2fK9Qfi.png)
+![Post A Business](https://i.imgur.com/p5h8YmP.png)
 
 - A User can also edit a listing
 - The layout and functionality is similar to the Add a Business page, also has the same error handling
 
-![Edit a Business](https://i.imgur.com/uA2wfdX.png)
+![Edit a Business](https://i.imgur.com/y9A3oLa.png)
 
 ## Directions
 
-- When in any Business details page and the User clicks on the address below 'Get Directions', the User is taken to a page that lets them input a location to show how far away the business is from a user specified origin.
+- When on any Business page and the User clicks on the address link below 'Get Directions', the User is taken to a page that lets them input a location to show how far away the business is from a user specified origin.
 
-- No origin
+- Without origin input
 
 ![Directions 1](https://i.imgur.com/ZI6aTXu.jpeg)
 
@@ -214,8 +214,8 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 
 ## Quick Search
 
-- If a User doesn't want to type anything in the search bar and just wants to see the best coffee shops, they can click 'Quick Search' at the otp
-- Quick Search displays our top coffee businesses ordered by their rating
+- If a User doesn't want to type anything in the search bar and just wants to see the best coffee shops, they can click 'Quick Search' at the top
+- Quick Search displays Filter's top coffee businesses sorted by their rating
 
 ![Quick Search](https://i.imgur.com/16HbISN.jpeg)
 
