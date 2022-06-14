@@ -195,7 +195,7 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 ![Post A Business](https://i.imgur.com/p5h8YmP.png)
 
 - A User that owns the business listing can also edit the business details
-- The layout and functionality is similar to the Add a Business page, also has the same error handling
+- The layout and functionality is similar to the Add a Business page and has the same error handling to prevent incorrect inputs after a business listing has already been created
 
 ![Edit a Business](https://i.imgur.com/y9A3oLa.png)
 
