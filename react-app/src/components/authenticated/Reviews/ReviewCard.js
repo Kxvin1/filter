@@ -86,14 +86,14 @@ const ReviewCard = ({ review, user }) => {
   return (
     <div className="singleReview">
       <img className="avatar" src={avatars[review?.user_id]} alt="avatar" />
-      <h3>{review?.user.username}</h3>
-      <p>Reviewed: {review.date.slice(0, 16)}</p>
+      <h3>{review?.user?.username}</h3>
+      <p>Reviewed: {review?.date.slice(0, 16)}</p>
       <div className="rating">
         <Rating ratingValue={rating} readonly="true" size="30" />
       </div>
-      {review.review}
+      {review?.review}
       <div className="modifyReviewBtns">
-        {review.user_id === user?.id && (
+        {review?.user_id === user?.id && (
           <div>
             <button
               className="modifyBtn"
