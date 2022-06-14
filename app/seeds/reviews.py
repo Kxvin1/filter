@@ -16,8 +16,8 @@ def seed_reviews():
         "Very cute coffee shop! Has lots of seating (both inside and outside) and the staff is so friendly! I had a cappuccino and the foam was very fluffy and the coffee was still strong. A great place to study for an exam or catch up on emails.",
         "Was looking for a workspace outside the home office (along with java and a pastry) and this place hit the spot.  It was jammin' with a lot of remote workers both inside and the outer patio area.",
     ]
-    # Loop thru the businesses and assign a review to each one 1 - 15
-    for j in range(1, 16):
+    # Loop thru the businesses and assign a review to each one 1 - 20
+    for j in range(1, 21):
         # for each business assigned a review assign a user id 1-10
         for i in range(1, 11):
             # assign a random number 1 - 500 to the reviewDays variable to use later
