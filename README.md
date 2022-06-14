@@ -86,7 +86,7 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 
 - A User that isn't logged must log in in order to access the website
 
-![Splash Page](https://i.imgur.com/FSNEAHX.jpeg)
+![Splash Page](https://i.imgur.com/T3ZR5zB.jpeg)
 
 ## Log In and Sign Up
 
@@ -104,7 +104,7 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 
 - A User that is logged in will gain additional links to their navigation bar: Home, Add Business, Quick Search, and Log Out. The footer will also disappear.
 
-![Home Page Authenticated](https://i.imgur.com/1Kykha9.jpeg)
+![Home Page Authenticated](https://i.imgur.com/y1AHScb.jpeg)
 
 - When hovering over a listing a shadow will appear to let the user know which shop is the point of focus.
 - Clicking on 'Business Details' will redirect the user to that specific shop's details page.
