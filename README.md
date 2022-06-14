@@ -92,7 +92,12 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 
 - Users can log into an existing account or sign up. Alternatively, users can test the site with the Demo Login feature.
 
+- Login Modal
+
 ![Login Modal](https://i.imgur.com/ABpd9jr.png)
+
+- Signup Modal
+
 ![Signup Modal](https://i.imgur.com/G7CQs0t.jpeg)
 
 ## Home Page (logged in)
@@ -102,9 +107,14 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 ![Home Page Authenticated](https://i.imgur.com/1Kykha9.jpeg)
 
 - When hovering over a listing a shadow will appear to let the user know which shop is the point of focus.
-- Click on the name of 'Business Details' will redirect the user to that specific shop's details page.
+- Clicking on 'Business Details' will redirect the user to that specific shop's details page.
+
+- Home Page
 
 ![Home Page Splash](https://i.imgur.com/4a1N2VG.jpeg)
+
+- Hovered over a single business
+
 ![Hover Home](https://i.imgur.com/UYBknkS.png)
 
 ## Business Details
@@ -120,7 +130,11 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
    - On the right is a section that displays the business' website, phone number, and directions to their business address.
    - Below those two is an interactive Google Map displaying the location of the business that the user can interact with.
 
+- Top Section
+
 ![Business Details 1](https://i.imgur.com/IfdTPfx.jpeg)
+
+- Photos Page
 
 ![Business Details 2](https://i.imgur.com/ivFi3Ek.jpeg)
 
@@ -134,13 +148,24 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 
 - To achieve a cleaner look on the site, the edit and delete icons only show when the logged in User wrote the comment themselves.
 
-![Review Owner](https://i.imgur.com/krwQxQA.png)
+   - Wrote the review
 
-![Review Not Owner](https://i.imgur.com/EuQS2Y3.png)
+  ![Review Owner](https://i.imgur.com/krwQxQA.png)
 
-- Users can leave a review rating here, as well as leave a comment.
+  - Did not write the review
+
+  ![Review Not Owner](https://i.imgur.com/EuQS2Y3.png)
+
+- Users can leave a rating here, as well as leave a review.
 
 ![Reviews Section 2](https://i.imgur.com/hHhU4Mm.png)
+
+- Edit Review Modal
+
+![Edit Review Modal](https://i.imgur.com/RTFkcUp.png)
+
+- Delete Review Modal
+![Delete Review Modal](https://i.imgur.com/zCPieES.png)
 
 ### Business Owner
 - If the logged in user does own the business, they gain additional functionality in addition to all the functionality as a non owner.
@@ -149,8 +174,58 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
    - Business owners can delete the business listing
    - If a business owner clicks on 'See Photos' they are redirected to the same page but this time can delete any photo even if they are not the owner of the photo
 
+- Top Section (additional buttons as an owner)
+
 ![Business Owner Details 1](https://i.imgur.com/bcDqPWm.jpeg)
+
+- See Photos Section
 
 ![Business Owner Details 2](https://i.imgur.com/LBcjfkL.jpeg)
 
+- Edit Business
+
 ![Business Owner Details 3](https://i.imgur.com/BnHUlZC.png)
+
+## Adding and Editing a Business
+
+- In 'Add a Business' a User can create their own Business listing.
+- Users can add images via drag and drop
+- Address and latitude and longitude are automatically filled out via Google Maps API
+- Proper error handling to ensure all information is input correctly and within the site boundaries
+
+![Post A Business](https://i.imgur.com/2fK9Qfi.png)
+
+- A User can also edit a listing
+- The layout and functionality is similar to the Add a Business page, also has the same error handling
+
+![Edit a Business](https://i.imgur.com/uA2wfdX.png)
+
+## Directions
+
+- When in any Business details page and the User clicks on the address below 'Get Directions', the User is taken to a page that lets them input a location to show how far away the business is from a user specified origin.
+
+- No origin
+
+![Directions 1](https://i.imgur.com/ZI6aTXu.jpeg)
+
+- With origin input
+
+![Directions 2](https://i.imgur.com/66c1aCh.jpeg)
+
+## Quick Search
+
+- If a User doesn't want to type anything in the search bar and just wants to see the best coffee shops, they can click 'Quick Search' at the otp
+- Quick Search displays our top coffee businesses ordered by their rating
+
+![Quick Search](https://i.imgur.com/16HbISN.jpeg)
+
+## 404 (User logged out)
+
+![404 logged out](https://i.imgur.com/RLK8eof.png)
+
+## 404 (User logged in)
+
+![404 logged in](https://i.imgur.com/KbmGelW.png)
+
+
+[Back to top](https://github.com/Kxvin1/filter#filter)
