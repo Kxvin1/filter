@@ -152,6 +152,14 @@ const EditBusinessForm = () => {
     return <h1>Loading...</h1>;
   }
 
+  let requirements;
+
+  if (validationErrors.length) {
+    requirements = <h3 className="images-header">Current Form Errors:</h3>;
+  } else {
+    requirements = <></>;
+  }
+
   return (
     <div className="new-business-form-container">
       <form onSubmit={handleUpload}>
@@ -316,7 +324,7 @@ const EditBusinessForm = () => {
       <div className="image-upload-container">
         <div className="image-upload-container-inner">
           <div className="field_section_container">
-            <h3 className="images-header">Upload Images</h3>
+            {requirements}
             <div className="error_container_div">
               <ul className="error_container">
                 {validationErrors.length > 0 &&
@@ -331,6 +339,7 @@ const EditBusinessForm = () => {
                   ))}
               </ul>
             </div>
+            <h3 className="images-header">Upload Images</h3>
             <div className="imageUploadContainer">
               <ImageUploading
                 multiple
