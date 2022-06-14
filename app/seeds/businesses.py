@@ -213,6 +213,76 @@ def seed_businesses():
         lat=37.76339068448897,
         lng=-122.46595244420352,
     )
+    business16 = Business(
+        user_id=1,
+        name="Local Coffee House",
+        address="614 E Cooper Ave Aspen, CO 81611",
+        zipcode="81611",
+        city="Aspen",
+        state="CO",
+        country="USA",
+        phone_number="9704294026",
+        website="https://www.localcoffeeaspen.com/",
+        # price=None,
+        lat=39.18799133042765,
+        lng=-106.81724130157579,
+    )
+    business17 = Business(
+        user_id=1,
+        name="Paradise Bakery",
+        address="320 S Galena St Aspen, CO 81611",
+        zipcode="81611",
+        city="Aspen",
+        state="CO",
+        country="USA",
+        phone_number="9709257585",
+        website="https://www.paradisebakeryaspen.com/",
+        # price=None,
+        lat=39.18834312366375,
+        lng=-106.81844979972436,
+    )
+    business18 = Business(
+        user_id=1,
+        name="Bear Den Aspen",
+        address="301 E Hopkins Ave Aspen, CO 81611",
+        zipcode="81611",
+        city="Aspen",
+        state="CO",
+        country="USA",
+        phone_number="9709229218",
+        website="https://beardenaspen.com/",
+        # price=None,
+        lat=39.190033357458425,
+        lng=-106.82055864390392,
+    )
+    business19 = Business(
+        user_id=7,
+        name="Craft & Common",
+        address="47 E Robinson St Ste 100 Orlando, FL 32801",
+        zipcode="32801",
+        city="Orlando",
+        state="FL",
+        country="USA",
+        phone_number="4077238078",
+        website="https://craftandcommon.com/",
+        # price=None,
+        lat=28.546054947708402,
+        lng=-81.37810338824161
+    )
+    business20 = Business(
+        user_id=2,
+        name="CFS Coffee",
+        address="7535 W Sand Lake Rd Orlando, FL 32819",
+        zipcode="32819",
+        city="Orlando",
+        state="FL",
+        country="USA",
+        phone_number="4072505724",
+        website="https://www.cfscoffee.com/",
+        # price=None,
+        lat=28.45095184317714,
+        lng= -81.48505015940685
+    )
 
     db.session.add(business1)
     db.session.add(business2)
@@ -229,6 +299,11 @@ def seed_businesses():
     db.session.add(business13)
     db.session.add(business14)
     db.session.add(business15)
+    db.session.add(business16)
+    db.session.add(business17)
+    db.session.add(business18)
+    db.session.add(business19)
+    db.session.add(business20)
 
 
 def undo_business():

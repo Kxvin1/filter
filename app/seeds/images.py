@@ -242,6 +242,131 @@ def seed_images():
         user_id=1,
         url="https://s3-media0.fl.yelpcdn.com/bphoto/JrC9jH-nvOxcBd7dXkPAag/o.jpg",
     )
+    image46 = Image(
+        business_id=16,
+        user_id=1,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/dasJwviZK46mlP98bC__Uw/o.jpg",
+    )
+    image47 = Image(
+        business_id=16,
+        user_id=1,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/pgMD49r5-ELbpaqLya8zWA/o.jpg",
+    )
+    image48 = Image(
+        business_id=16,
+        user_id=1,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/c1oEJR6b-RGT5Byw9WYYTQ/o.jpg",
+    )
+    image49 = Image(
+        business_id=16,
+        user_id=1,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/yTFksG5LjZeAuShqYr59aA/o.jpg",
+    )
+    image50 = Image(
+        business_id=16,
+        user_id=1,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/z9Ct-7u3TES15bthkpEciA/o.jpg",
+    )
+    image51 = Image(
+        business_id=17,
+        user_id=1,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/OmDKLkEFhFkVh0c24HJZSg/o.jpg",
+    )
+    image52 = Image(
+        business_id=17,
+        user_id=1,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/OmDKLkEFhFkVh0c24HJZSg/o.jpg",
+    )
+    image53 = Image(
+        business_id=17,
+        user_id=1,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/ccS1RC4IsFcJMV0a_nI7mA/o.jpg",
+    )
+    image54 = Image(
+        business_id=17,
+        user_id=1,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/ccS1RC4IsFcJMV0a_nI7mA/o.jpg",
+    )
+    image55 = Image(
+        business_id=17,
+        user_id=1,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/bkT_TYhBbqPAfDZri94Vbw/o.jpg",
+    )
+    image56 = Image(
+        business_id=18,
+        user_id=1,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/O1OogH4ZmO-jXl9fESviLQ/o.jpg",
+    )
+    image57 = Image(
+        business_id=18,
+        user_id=1,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/_U4o21D30ZMSYHl7rg9fJg/o.jpg",
+    )
+    image58 = Image(
+        business_id=18,
+        user_id=1,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/04Cva9DL3Oai7-xXjs74dg/o.jpg",
+    )
+    image59 = Image(
+        business_id=18,
+        user_id=1,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/04Cva9DL3Oai7-xXjs74dg/o.jpg",
+    )
+    image60 = Image(
+        business_id=18,
+        user_id=1,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/7FkGZOWEGp0v1jdbFPBZLQ/o.jpg",
+    )
+    image61 = Image(
+        business_id=19,
+        user_id=7,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/YM1bMI0oaUoVjAwfjRGG9g/o.jpg",
+    )
+    image62 = Image(
+        business_id=19,
+        user_id=7,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/KdnDjY2mxoKIqGrcWCTNlg/o.jpg",
+    )
+    image63 = Image(
+        business_id=19,
+        user_id=7,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/XIfI3SgO9NxU3s9ds3pA0Q/o.jpg",
+    )
+    image64 = Image(
+        business_id=19,
+        user_id=7,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/s61Rab1lRysoBskt_bQVwA/o.jpg",
+    )
+    image65 = Image(
+        business_id=19,
+        user_id=7,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/XgSJ_tjXn2JyL-GCVZbVmA/o.jpg",
+    )
+    image66 = Image(
+        business_id=20,
+        user_id=2,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/zN6SK4QRijzeqgz2PzZoNQ/o.jpg",
+    )
+    image67 = Image(
+        business_id=20,
+        user_id=2,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/r4qc1bHVltf3ybKu7d3qpQ/o.jpg",
+    )
+    image68 = Image(
+        business_id=20,
+        user_id=2,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/qRP-4mlwfnzujW0BG4OV0w/o.jpg",
+    )
+    image69 = Image(
+        business_id=20,
+        user_id=2,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/PpLSaI-_Xo6I4XTvBG58WA/o.jpg",
+    )
+    image70 = Image(
+        business_id=20,
+        user_id=2,
+        url="https://s3-media0.fl.yelpcdn.com/bphoto/lBiXrICBVm90Ttsqal2usA/o.jpg",
+    )
 
     db.session.add(image1)
     db.session.add(image2)
@@ -288,6 +413,31 @@ def seed_images():
     db.session.add(image43)
     db.session.add(image44)
     db.session.add(image45)
+    db.session.add(image46)
+    db.session.add(image47)
+    db.session.add(image48)
+    db.session.add(image49)
+    db.session.add(image50)
+    db.session.add(image51)
+    db.session.add(image52)
+    db.session.add(image53)
+    db.session.add(image54)
+    db.session.add(image55)
+    db.session.add(image56)
+    db.session.add(image57)
+    db.session.add(image58)
+    db.session.add(image59)
+    db.session.add(image60)
+    db.session.add(image61)
+    db.session.add(image62)
+    db.session.add(image63)
+    db.session.add(image64)
+    db.session.add(image65)
+    db.session.add(image66)
+    db.session.add(image67)
+    db.session.add(image68)
+    db.session.add(image69)
+    db.session.add(image70)
 
     db.session.commit()
 
