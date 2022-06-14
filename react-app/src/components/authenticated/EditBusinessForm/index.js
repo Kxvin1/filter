@@ -141,6 +141,8 @@ const EditBusinessForm = () => {
     if (!website.includes("http://") && !website.includes("https://"))
       errors.push("Website invalid (must include http:// or https://)");
 
+    if (website.length > 52) errors.push("Website URL too long");
+
     if (images.length < 3) errors.push("Minimum 3 images required");
 
     setValidationErrors(errors);
