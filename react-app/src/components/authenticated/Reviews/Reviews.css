@@ -89,6 +89,7 @@
   min-height: 9em;
   transition: box-shadow 0.9s ease;
   margin-bottom: 1em;
+  word-break: break-all;
 }
 
 .singleReview:hover {

@@ -116,11 +116,41 @@ const EditBusinessForm = () => {
     dispatch(getUserBusinesses(user.id));
   }, [dispatch, businessId]);
 
+  // useEffect(() => {
+  //   const errors = [];
+  //   if (images.length < 3) errors.push("Please include at least 3 images");
+  //   setValidationErrors(errors);
+  // }, [name, zipcode, address, city, state, country, images]);
+
   useEffect(() => {
     const errors = [];
-    if (images.length < 3) errors.push("Please include at least 3 images");
+
+    if (images.length < 3) errors.push("Minimum 3 images required");
+
+    if (name.length > 40)
+      errors.push("Business name too long (40 characters or less)");
+
+    if (city.length > 25)
+      errors.push("City name too long (25 characters or less)");
+
+    // short circuit so error doesn't show right away when empty
+    if (zipcode.length > 5 && zipcode.length !== 5)
+      errors.push("Zipcode must be 5 digits");
+
+    // short circuit so error doesn't show right away when empty
+    if (phone_number.length > 5 && phone_number.length !== 10)
+      errors.push("Phone number must be 10 digits");
+
+    // short circuit so error doesn't show right away when empty
+    if (
+      website.length > 0 &&
+      !website.includes("http://") &&
+      !website.includes("https://")
+    )
+      errors.push("Website invalid (must include http:// or https://)");
+
     setValidationErrors(errors);
-  }, [name, zipcode, address, city, state, country, images]);
+  }, [images, name, city, zipcode, phone_number, website]);
 
   if (!businessToEdit) {
     return <h1>Loading...</h1>;
