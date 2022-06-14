@@ -118,7 +118,7 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
       - If Write Review is clicked the user is scrolled to the review section.
       - If See Photos is clicked the user is redirected to a page containing of all the business' photos.
    - On the right is a section that displays the business' website, phone number, and directions to their business address.
-   - Below those two is an interactive Google Map displaying the location of the spot that the user can interact with.
+   - Below those two is an interactive Google Map displaying the location of the business that the user can interact with.
 
 ![Business Details 1](https://i.imgur.com/IfdTPfx.jpeg)
 
