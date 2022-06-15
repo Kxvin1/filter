@@ -51,14 +51,19 @@ function LoginForm() {
         clearForm();
         setErrors(errors);
       } else {
+        setErrors([]);
         dispatch(login(email, password));
       }
     }
   };
 
-  useEffect(() => {
-    setErrors(errors);
-  }, [errors]);
+  // useEffect(() => {
+  //   setErrors(errors);
+  // }, [errors]);
+
+  // useEffect(() => {
+  //   if (email.length > 0 || password.length > 0) setErrors([]);
+  // }, [email, password]);
 
   if (user) {
     return <Redirect to="/" />;

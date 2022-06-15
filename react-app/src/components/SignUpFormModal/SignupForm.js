@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { signUp } from "../../store/session";
 import { useDispatch } from "react-redux";
 
@@ -14,23 +14,45 @@ function SignupForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setErrors([]);
-    const errors = [];
 
-    let emailError;
+    if (errors.length > 0) {
+      return;
+    }
+
+    setErrors([]);
+    // const errors = [];
+
+    // let emailError;
 
     if (password === confirmPassword) {
       const data = await dispatch(signUp(username, email, password));
 
-      if (data) {
-        emailError = data[0].split(":")[1].trimStart();
-        errors.push(emailError);
-        setErrors(errors);
-      }
-    } else {
-      return setErrors(["Passwords do not match."]);
+      //   if (data) {
+      //     emailError = data[0].split(":")[1].trimStart();
+      //     errors.push(emailError);
+      //     setErrors(errors);
+      //   }
+      // } else {
+      //   return setErrors(["Passwords do not match."]);
     }
   };
+
+  useEffect(() => {
+    const errors = [];
+
+    if (username.length > 25)
+      errors.push("Username too long (25 characters or less)");
+
+    if (email.length > 35)
+      errors.push("Email address too long (35 characters or less)");
+
+    if (password.length > 25)
+      errors.push("Password too long (25 characters or less)");
+
+    if (password !== confirmPassword) errors.push("Passwords do not match");
+
+    setErrors(errors);
+  }, [username, email, password, confirmPassword]);
 
   return (
     <div className="login-box">
