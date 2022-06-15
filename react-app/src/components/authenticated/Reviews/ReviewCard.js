@@ -141,7 +141,6 @@ const ReviewCard = ({ review, user }) => {
                 Edit Rating & Review
                 <div className="error_container_div">
                   <ul className="error_container">
-                    {console.log(validationErrors, "validation errors")}
                     {validationErrors.length > 0 &&
                       validationErrors.map((error) => (
                         <li
