@@ -14,24 +14,40 @@ function SignupForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrors([]);
+    const errors = [];
 
     if (errors.length > 0) {
       return;
     }
 
-    setErrors([]);
-    // const errors = [];
+    if (username.length > 25) {
+      errors.push("Username too long (25 characters or less)");
+      return;
+    }
 
-    // let emailError;
+    if (email.length > 35) {
+      errors.push("Email address too long (35 characters or less)");
+      return;
+    }
+
+    if (password.length > 25) {
+      errors.push("Password too long (25 characters or less)");
+      return;
+    }
+
+    let emailError;
 
     if (password === confirmPassword) {
       const data = await dispatch(signUp(username, email, password));
 
-      //   if (data) {
-      //     emailError = data[0].split(":")[1].trimStart();
-      //     errors.push(emailError);
-      //     setErrors(errors);
-      //   }
+      if (data) {
+        console.log(data);
+
+        emailError = data[0].split(":")[1].trimStart();
+        errors.push(emailError);
+        setErrors(errors);
+      }
       // } else {
       //   return setErrors(["Passwords do not match."]);
     }
