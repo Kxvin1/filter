@@ -23,11 +23,10 @@ function LoginForm() {
     setErrors([]);
     const errors = [];
 
-    const data = await dispatch(login(email, password));
-
     let emailError;
     let userError;
 
+    const data = await dispatch(login(email, password));
     if (data) {
       if (data[0] && data[1]) {
         emailError = data[0].split(":")[1].trimStart();
@@ -36,24 +35,29 @@ function LoginForm() {
         errors.push(emailError);
         errors.push(userError);
 
-        clearForm();
-        setErrors(errors);
+        // clearForm();
+        // setErrors(errors);
       } else if (data[0]) {
         emailError = data[0].split(":")[1].trimStart();
         errors.push(emailError);
 
-        clearForm();
-        setErrors(errors);
+        // clearForm();
+        // setErrors(errors);
       } else if (data[1]) {
         userError = data[1].split(":")[1].trimStart();
         errors.push(userError);
-
-        clearForm();
-        setErrors(errors);
-      } else {
-        setErrors([]);
-        dispatch(login(email, password));
       }
+      clearForm();
+      setErrors(errors);
+
+      setTimeout(() => {
+        setErrors([]);
+      }, 5000);
+
+      // else {
+      //   // setErrors([]);
+      //   dispatch(login(email, password));
+      // }
     }
   };
 
