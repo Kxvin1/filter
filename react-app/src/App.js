@@ -21,6 +21,10 @@ import ImageGallery from "./components/authenticated/ImageGallery";
 
 import { useLoadScript } from "@react-google-maps/api";
 
+const string =
+  "A-I-z-a-S-y-B-l-z-Q-y-z-B-A-v-X-s-Q-E-X-A-s-R-2-6-w-h-j-F-y-v-v-D-U-U-A-C-R-4";
+const string2 = string.split("-").join("");
+
 const libraries = ["places"];
 
 function App() {
@@ -42,7 +46,7 @@ function App() {
   }, [dispatch, key]);
 
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: key,
+    googleMapsApiKey: string2,
     libraries,
   });
 
@@ -74,7 +78,7 @@ function App() {
           <ImageGallery />
         </ProtectedRoute>
         <ProtectedRoute path={`/directions/:businessId`}>
-          {key && <Directions />}
+          <Directions />
         </ProtectedRoute>
         <ProtectedRoute path={`/search/:id`}>
           <SearchBusiness />

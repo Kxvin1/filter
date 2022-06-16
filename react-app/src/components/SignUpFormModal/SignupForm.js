@@ -22,17 +22,17 @@ function SignupForm() {
     }
 
     if (username.length > 25) {
-      errors.push("Username too long (25 characters or less)");
+      errors.push("Username too long. (25 characters or less)");
       return;
     }
 
     if (email.length > 35) {
-      errors.push("Email address too long (35 characters or less)");
+      errors.push("Email address too long. (35 characters or less)");
       return;
     }
 
     if (password.length > 25) {
-      errors.push("Password too long (25 characters or less)");
+      errors.push("Password too long. (25 characters or less)");
       return;
     }
 
@@ -57,15 +57,15 @@ function SignupForm() {
     const errors = [];
 
     if (username.length > 25)
-      errors.push("Username too long (25 characters or less)");
+      errors.push("Username too long. (25 characters or less)");
 
     if (email.length > 35)
-      errors.push("Email address too long (35 characters or less)");
+      errors.push("Email address too long. (35 characters or less)");
 
     if (password.length > 25)
-      errors.push("Password too long (25 characters or less)");
+      errors.push("Password too long. (25 characters or less)");
 
-    if (password !== confirmPassword) errors.push("Passwords do not match");
+    if (password !== confirmPassword) errors.push("Passwords do not match.");
 
     setErrors(errors);
   }, [username, email, password, confirmPassword]);
