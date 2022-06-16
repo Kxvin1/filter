@@ -42,13 +42,10 @@ def add_business():
             website=data["website"],
             lat=data["lat"],
             lng=data["lng"],
-            # price=data["price"],
         )
 
-        # create a session and add to db
         db.session.add(business)
         db.session.commit()
-        # return json object
         return business.to_dict()
     return {"errors": validation_errors_to_error_messages(form.errors)}, 401
 

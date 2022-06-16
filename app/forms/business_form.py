@@ -54,4 +54,3 @@ class NewBusinessForm(FlaskForm):
     website = StringField("website", validators=[DataRequired()])
     lat = DecimalField("lat", validators=[DataRequired()])
     lng = DecimalField("lng", validators=[DataRequired()])
-    # price = DecimalField("Price", validators=[DataRequired()])

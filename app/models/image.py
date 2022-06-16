@@ -23,15 +23,8 @@ class Image(db.Model):
             "user_id": self.user_id,
             "url": self.url,
         }
-
-    # def image_info(self):
-    #     return self.url
-
     def image_info(self):
         return {
             "id": self.id,
             "url": self.url,
         }
-
-    # def image_id(self):
-    #     return self.id
