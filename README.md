@@ -18,7 +18,7 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 - [Frontend Routes](https://github.com/Kxvin1/filter/wiki/Frontend-Routes)
 - [User Stories](https://github.com/Kxvin1/filter/wiki/User-Stories)
 
-#### **_Recommended resolution size for viewing: 1366 x 768 or higher_**
+#### **_Recommended resolution for viewing: 1366 x 768 or higher_**
 
 # Technologies Used
 
