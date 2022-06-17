@@ -9,7 +9,7 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
   - Conducted authorization checks using React hooks, redirecting users to secure paths based on credentials
   - Created relational databases using Python and SQLAlchemy to easily sort and find related table information
   - Adhered to React and ES6 best practices to generate a true single page reactive web app experience
-  - Reduced needed PostgreSQL database tables by 25% and heavily DRYed up backend code by utilizing a one-to-many polymorphic table on the database level
+  - Reduced needed PostgreSQL database tables by 25% and heavily DRYed up backend code by utilizing one-to-many tables on the database level
 
 ### Links
 - [Live Site](https://filter-capstone.herokuapp.com/)
