@@ -3,7 +3,7 @@
 Inspired by Yelp, Filter is a single page app which publish crowd-sourced reviews about coffee shop businesses. Users can interact with the webapp via searching for coffee shop businesses, or writing reviews on a specific coffee shop's business page.
 
 ### Here are some key features:
-  - Integrated Google Maps API with geolocation to dynamically display business locations and directions based on user input
+  - Utilized Google Maps API to dynamically display business locations on a map and provide directions to the business based on user input
   - Used Redux to create a single page app to dynamically render React components without a refresh
   - Stored image uploads in the cloud using AWS S3, reducing server load and allowing app to scale gracefully
   - Conducted authorization checks using React hooks, redirecting users to secure paths based on credentials
