@@ -4,11 +4,12 @@ Inspired by Yelp, Filter is a single page app which publish crowd-sourced review
 
 ### Here are some key features:
   - Integrated Google Maps API with geolocation to dynamically display business locations and directions based on user input
-  - Leveraged Redux to create a single page app to dynamically render React components without a refresh
+  - Used Redux to create a single page app to dynamically render React components without a refresh
   - Stored image uploads in the cloud using AWS S3, reducing server load and allowing app to scale gracefully
   - Conducted authorization checks using React hooks, redirecting users to secure paths based on credentials
   - Created relational databases using Python and SQLAlchemy to easily sort and find related table information
   - Adhered to React and ES6 best practices to generate a true single page reactive web app experience
+  - Reduced needed PostgreSQL database tables by 25% and heavily DRYed up backend code by utilizing a one-to-many polymorphic table on the database level
 
 ### Links
 - [Live Site](https://filter-capstone.herokuapp.com/)
