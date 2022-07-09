@@ -43,8 +43,8 @@ a:active {
 /* margin top: -12rem and margin-bottom 7rem for errors to line up properly */
 .error-li {
   font-size: 1.5rem;
-  margin-top: -12rem;
-  margin-bottom: 7rem;
+  margin-top: -20rem;
+  margin-bottom: 15rem;
   padding: 10px;
   list-style-type: none;
   color: red;

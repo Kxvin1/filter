@@ -79,14 +79,24 @@
   margin-left: 5em;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1600px) {
   .new-business-form-container {
     grid-template-columns: 4fr 0fr !important;
     padding-top: 25px;
   }
 
+  .new-business-form-container {
+    /* display: grid; */
+    /* grid-template-columns: 4fr 2fr; */
+    width: 80%;
+    margin-top: 9em;
+    margin-left: 1em;
+    /* margin-right: auto; */
+    margin-bottom: 100px;
+  }
+
   .image-upload-container {
-    display: none;
+    /* display: none; */
   }
 }
 
